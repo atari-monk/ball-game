@@ -1,0 +1,14 @@
+import { Socket } from 'socket.io-client';
+import { ISocketLogicUnit } from "atari-monk-ball-game-api";
+import { injectable } from 'inversify';
+
+@injectable()
+export abstract class SocketLogicUnit implements ISocketLogicUnit {
+  constructor(private readonly _eventName: string) {}
+
+  public initializeSocket(socket: Socket) {
+    socket.on(this._eventName, this.logicUnit.bind(this));
+  }
+
+  protected abstract logicUnit(...args: any[]): void;
+}
