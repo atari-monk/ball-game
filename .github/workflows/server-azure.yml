@@ -18,8 +18,8 @@ jobs:
     steps:
       - uses: actions/checkout@v2
         with:
-          path: 'server'
-          
+          path: './server/'
+
       - name: Print current folder and its content
         run: |
           pwd
