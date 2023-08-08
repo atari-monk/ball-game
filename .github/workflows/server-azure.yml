@@ -47,6 +47,10 @@ jobs:
       name: production
       url: '${{ steps.deploy-to-webapp.outputs.webapp-url }}'
     steps:
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '${{ env.NODE_VERSION }}'
       - name: Download artifact from build job
         uses: actions/download-artifact@v3
         with:
