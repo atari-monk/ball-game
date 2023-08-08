@@ -36,7 +36,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: node-app
-          path: ./server
+          path: .
 
   deploy:
     runs-on: ubuntu-latest
@@ -58,4 +58,4 @@ jobs:
           app-name: 'atari-monk-ball-game-server'
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_ATARI_MONK_BALL_GAME }}
-          package: .
+          package: ${{ github.workspace }}/node-app
