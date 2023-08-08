@@ -16,6 +16,7 @@
 # For more information on GitHub Actions for Azure: https://github.com/Azure/Actions
 # For more information on the Azure Web Apps Deploy action: https://github.com/Azure/webapps-deploy
 # For more samples to get started with GitHub Action workflows to deploy to Azure: https://github.com/Azure/actions-workflow-samples
+name: Deploy server to Azure
 
 on:
   push:
@@ -26,7 +27,7 @@ on:
 
 env:
   AZURE_WEBAPP_NAME: atari-monk-ball-game-server    # set this to your application's name
-  AZURE_WEBAPP_PACKAGE_PATH: 'server' # set this to the path to your web app project, in this case, the 'server' subfolder
+  AZURE_WEBAPP_PACKAGE_PATH: './server' # set this to the path to your web app project, in this case, the 'server' subfolder
   NODE_VERSION: '18.x'                # set this to the node version to use
 
 permissions:
@@ -45,7 +46,6 @@ jobs:
         cache: 'npm'
 
     - name: npm install, build, and test
-      working-directory: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }} # Set working directory to the "server" folder
       run: |
         npm install
         npm run build --if-present
@@ -55,7 +55,7 @@ jobs:
       uses: actions/upload-artifact@v3
       with:
         name: node-app
-        path: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
+        path: .
 
   deploy:
     permissions:
