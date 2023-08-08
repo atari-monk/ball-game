@@ -32,5 +32,6 @@ npm i (Get-Item $pack).Name
 Remove-Item $api
 Remove-Item ($lib + $pack)
 Remove-Item ($client + $pack)
+#needed for deploy
 #Remove-Item ($server + $pack)
 Remove-Item ($game + $pack)
