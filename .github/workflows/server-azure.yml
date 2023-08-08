@@ -29,6 +29,8 @@ jobs:
           npm run test --if-present
       - name: Copy package.json to build directory
         run: cp ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/package.json ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build/
+      - name: Copy atari-monk-ball-game-api-0.0.1.tgz to build directory
+        run: cp ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/atari-monk-ball-game-api-0.0.1.tgz ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}/build/
       - name: Upload artifact for deployment job
         uses: actions/upload-artifact@v3
         with:
