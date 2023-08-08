@@ -58,4 +58,4 @@ jobs:
           app-name: 'atari-monk-ball-game-server'
           slot-name: 'production'
           publish-profile: ${{ secrets.AzureAppService_PublishProfile_ATARI_MONK_BALL_GAME }}
-          package: ./server
+          package: .
