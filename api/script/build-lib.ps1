@@ -32,5 +32,5 @@ npm i (Get-Item $pack).Name
 Remove-Item $api
 Remove-Item ($lib + $pack)
 Remove-Item ($client + $pack)
-Remove-Item ($server + $pack)
-#Remove-Item ($game + $pack)
+#Remove-Item ($server + $pack)
+Remove-Item ($game + $pack)
