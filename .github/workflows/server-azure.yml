@@ -18,6 +18,9 @@ jobs:
     steps:
       - uses: actions/checkout@v2
 
+      - name: Checkout the server directory
+        run: cd ./server
+
       - name: Print current folder and its content
         run: |
           pwd
@@ -27,14 +30,6 @@ jobs:
         uses: actions/setup-node@v1
         with:
           node-version: '18.x'
-
-      - name: Checkout the server directory
-        run: cd ./server
-        
-      - name: Print current folder and its content
-        run: |
-          pwd
-          ls -la
 
       - name: npm install, build, and test
         run: |
