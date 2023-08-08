@@ -35493,7 +35493,7 @@ let SocketConfigurator = exports.SocketConfigurator = class SocketConfigurator {
         this._uri = this.getUri();
     }
     getConfig(config) {
-        return Object.assign({ environment: Environment_1.Environment.Production, localUri: 'http://localhost:3001', prodUri: 'https://atari-monk-ball-game-server.azurewebsites.net/' }, config);
+        return Object.assign({ environment: Environment_1.Environment.Production, localUri: 'http://localhost:3001', prodUri: 'https://atari-monk-ball-game-server.azurewebsites.net' }, config);
     }
     getUri() {
         return this.config.environment === Environment_1.Environment.Development
@@ -35513,7 +35513,7 @@ exports.SocketConfigurator = SocketConfigurator = __decorate([
 /*!***********************************!*\
   !*** ./src/SocketErrorHandler.ts ***!
   \***********************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_226358__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_226357__) {
 
 "use strict";
 
@@ -35528,8 +35528,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SocketErrorHandler = void 0;
-const inversify_1 = __nested_webpack_require_226358__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const socket_io_client_1 = __nested_webpack_require_226358__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const inversify_1 = __nested_webpack_require_226357__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const socket_io_client_1 = __nested_webpack_require_226357__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
 let SocketErrorHandler = exports.SocketErrorHandler = class SocketErrorHandler {
     constructor(socket) {
         this.socket = socket;
@@ -35560,7 +35560,7 @@ exports.SocketErrorHandler = SocketErrorHandler = __decorate([
 /*!*********************************************************!*\
   !*** ./src/di-factory/ball-logic/BallEmitterCreator.ts ***!
   \*********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_228587__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_228586__) {
 
 "use strict";
 
@@ -35578,10 +35578,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BallEmitterCreator = void 0;
-const inversify_1 = __nested_webpack_require_228587__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const BallEventEmitterLogicUnit_1 = __nested_webpack_require_228587__(/*! ../../emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
-const atari_monk_ball_game_api_1 = __nested_webpack_require_228587__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
-const EventEmitterLogicManager_1 = __nested_webpack_require_228587__(/*! ../../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
+const inversify_1 = __nested_webpack_require_228586__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const BallEventEmitterLogicUnit_1 = __nested_webpack_require_228586__(/*! ../../emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
+const atari_monk_ball_game_api_1 = __nested_webpack_require_228586__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
+const EventEmitterLogicManager_1 = __nested_webpack_require_228586__(/*! ../../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
 let BallEmitterCreator = exports.BallEmitterCreator = class BallEmitterCreator {
     constructor(ballEmitterLogicManager, ballMovement, ballVelocity) {
         this.ballEmitterLogicManager = ballEmitterLogicManager;
@@ -35611,7 +35611,7 @@ exports.BallEmitterCreator = BallEmitterCreator = __decorate([
 /*!*******************************************************!*\
   !*** ./src/di-factory/ball-logic/BallLogicCreator.ts ***!
   \*******************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_231651__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_231650__) {
 
 "use strict";
 
@@ -35629,10 +35629,10 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BallLogicCreator = void 0;
-const inversify_1 = __nested_webpack_require_231651__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const BallMovement_1 = __nested_webpack_require_231651__(/*! ../../socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
-const BallVelocity_1 = __nested_webpack_require_231651__(/*! ../../socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
-const SocketLogicManager_1 = __nested_webpack_require_231651__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
+const inversify_1 = __nested_webpack_require_231650__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const BallMovement_1 = __nested_webpack_require_231650__(/*! ../../socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
+const BallVelocity_1 = __nested_webpack_require_231650__(/*! ../../socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
+const SocketLogicManager_1 = __nested_webpack_require_231650__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
 let BallLogicCreator = exports.BallLogicCreator = class BallLogicCreator {
     constructor(ballMovement, ballVelocity, ballLogicManager) {
         this.ballMovement = ballMovement;
@@ -35662,7 +35662,7 @@ exports.BallLogicCreator = BallLogicCreator = __decorate([
 /*!*******************************************************!*\
   !*** ./src/di-factory/ball-logic/BallLogicFactory.ts ***!
   \*******************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_234434__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_234433__) {
 
 "use strict";
 
@@ -35674,15 +35674,15 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BallLogicFactory = void 0;
-const inversify_1 = __nested_webpack_require_234434__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const BallManager_1 = __nested_webpack_require_234434__(/*! ../../BallManager */ "./src/BallManager.ts");
-const BallMovement_1 = __nested_webpack_require_234434__(/*! ../../socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
-const BallVelocity_1 = __nested_webpack_require_234434__(/*! ../../socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
-const BallEventEmitterLogicUnit_1 = __nested_webpack_require_234434__(/*! ../../emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
-const socket_io_client_1 = __nested_webpack_require_234434__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const BallLogicCreator_1 = __nested_webpack_require_234434__(/*! ./BallLogicCreator */ "./src/di-factory/ball-logic/BallLogicCreator.ts");
-const BallEmitterCreator_1 = __nested_webpack_require_234434__(/*! ./BallEmitterCreator */ "./src/di-factory/ball-logic/BallEmitterCreator.ts");
-const atari_monk_ball_game_api_1 = __nested_webpack_require_234434__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
+const inversify_1 = __nested_webpack_require_234433__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const BallManager_1 = __nested_webpack_require_234433__(/*! ../../BallManager */ "./src/BallManager.ts");
+const BallMovement_1 = __nested_webpack_require_234433__(/*! ../../socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
+const BallVelocity_1 = __nested_webpack_require_234433__(/*! ../../socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
+const BallEventEmitterLogicUnit_1 = __nested_webpack_require_234433__(/*! ../../emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
+const socket_io_client_1 = __nested_webpack_require_234433__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const BallLogicCreator_1 = __nested_webpack_require_234433__(/*! ./BallLogicCreator */ "./src/di-factory/ball-logic/BallLogicCreator.ts");
+const BallEmitterCreator_1 = __nested_webpack_require_234433__(/*! ./BallEmitterCreator */ "./src/di-factory/ball-logic/BallEmitterCreator.ts");
+const atari_monk_ball_game_api_1 = __nested_webpack_require_234433__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
 let BallLogicFactory = exports.BallLogicFactory = class BallLogicFactory {
     register(container) {
         this.registerBallManager(container);
@@ -35751,7 +35751,7 @@ exports.BallLogicFactory = BallLogicFactory = __decorate([
 /*!************************************************!*\
   !*** ./src/di-factory/client/ClientFactory.ts ***!
   \************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_239209__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_239208__) {
 
 "use strict";
 
@@ -35769,11 +35769,11 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ClientFactory = void 0;
-const inversify_1 = __nested_webpack_require_239209__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const SocketLogicFactory_1 = __nested_webpack_require_239209__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
-const OpenSocketFactory_1 = __nested_webpack_require_239209__(/*! ../socket/OpenSocketFactory */ "./src/di-factory/socket/OpenSocketFactory.ts");
-const PlayerLogicFactory_1 = __nested_webpack_require_239209__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
-const BallLogicFactory_1 = __nested_webpack_require_239209__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
+const inversify_1 = __nested_webpack_require_239208__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const SocketLogicFactory_1 = __nested_webpack_require_239208__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
+const OpenSocketFactory_1 = __nested_webpack_require_239208__(/*! ../socket/OpenSocketFactory */ "./src/di-factory/socket/OpenSocketFactory.ts");
+const PlayerLogicFactory_1 = __nested_webpack_require_239208__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
+const BallLogicFactory_1 = __nested_webpack_require_239208__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
 let ClientFactory = exports.ClientFactory = class ClientFactory {
     get socket() {
         return this._socket;
@@ -35825,7 +35825,7 @@ exports.ClientFactory = ClientFactory = __decorate([
 /*!*******************************************************!*\
   !*** ./src/di-factory/client/ClientFactoryBuilder.ts ***!
   \*******************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_243030__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_243029__) {
 
 "use strict";
 
@@ -35837,12 +35837,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ClientFactoryBuilder = void 0;
-const inversify_1 = __nested_webpack_require_243030__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const SocketLogicFactory_1 = __nested_webpack_require_243030__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
-const OpenSocketFactory_1 = __nested_webpack_require_243030__(/*! ../socket/OpenSocketFactory */ "./src/di-factory/socket/OpenSocketFactory.ts");
-const ClientFactory_1 = __nested_webpack_require_243030__(/*! ./ClientFactory */ "./src/di-factory/client/ClientFactory.ts");
-const PlayerLogicFactory_1 = __nested_webpack_require_243030__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
-const BallLogicFactory_1 = __nested_webpack_require_243030__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
+const inversify_1 = __nested_webpack_require_243029__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const SocketLogicFactory_1 = __nested_webpack_require_243029__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
+const OpenSocketFactory_1 = __nested_webpack_require_243029__(/*! ../socket/OpenSocketFactory */ "./src/di-factory/socket/OpenSocketFactory.ts");
+const ClientFactory_1 = __nested_webpack_require_243029__(/*! ./ClientFactory */ "./src/di-factory/client/ClientFactory.ts");
+const PlayerLogicFactory_1 = __nested_webpack_require_243029__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
+const BallLogicFactory_1 = __nested_webpack_require_243029__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
 let ClientFactoryBuilder = exports.ClientFactoryBuilder = class ClientFactoryBuilder {
     register(container) {
         container.bind(OpenSocketFactory_1.OpenSocketFactory).toSelf().inSingletonScope();
@@ -35869,7 +35869,7 @@ exports.ClientFactoryBuilder = ClientFactoryBuilder = __decorate([
 /*!****************************************************!*\
   !*** ./src/di-factory/client/TestClientFactory.ts ***!
   \****************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_245710__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_245709__) {
 
 "use strict";
 
@@ -35887,11 +35887,11 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TestClientFactory = void 0;
-const inversify_1 = __nested_webpack_require_245710__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const SocketLogicFactory_1 = __nested_webpack_require_245710__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
-const ClosedSocketFactory_1 = __nested_webpack_require_245710__(/*! ../socket/ClosedSocketFactory */ "./src/di-factory/socket/ClosedSocketFactory.ts");
-const PlayerLogicFactory_1 = __nested_webpack_require_245710__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
-const BallLogicFactory_1 = __nested_webpack_require_245710__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
+const inversify_1 = __nested_webpack_require_245709__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const SocketLogicFactory_1 = __nested_webpack_require_245709__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
+const ClosedSocketFactory_1 = __nested_webpack_require_245709__(/*! ../socket/ClosedSocketFactory */ "./src/di-factory/socket/ClosedSocketFactory.ts");
+const PlayerLogicFactory_1 = __nested_webpack_require_245709__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
+const BallLogicFactory_1 = __nested_webpack_require_245709__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
 let TestClientFactory = exports.TestClientFactory = class TestClientFactory {
     get socket() {
         return this._socket;
@@ -35943,7 +35943,7 @@ exports.TestClientFactory = TestClientFactory = __decorate([
 /*!***********************************************************!*\
   !*** ./src/di-factory/client/TestClientFactoryBuilder.ts ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_249589__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_249588__) {
 
 "use strict";
 
@@ -35955,12 +35955,12 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.TestClientFactoryBuilder = void 0;
-const inversify_1 = __nested_webpack_require_249589__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const SocketLogicFactory_1 = __nested_webpack_require_249589__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
-const ClosedSocketFactory_1 = __nested_webpack_require_249589__(/*! ../socket/ClosedSocketFactory */ "./src/di-factory/socket/ClosedSocketFactory.ts");
-const TestClientFactory_1 = __nested_webpack_require_249589__(/*! ./TestClientFactory */ "./src/di-factory/client/TestClientFactory.ts");
-const PlayerLogicFactory_1 = __nested_webpack_require_249589__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
-const BallLogicFactory_1 = __nested_webpack_require_249589__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
+const inversify_1 = __nested_webpack_require_249588__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const SocketLogicFactory_1 = __nested_webpack_require_249588__(/*! ../socket-logic/SocketLogicFactory */ "./src/di-factory/socket-logic/SocketLogicFactory.ts");
+const ClosedSocketFactory_1 = __nested_webpack_require_249588__(/*! ../socket/ClosedSocketFactory */ "./src/di-factory/socket/ClosedSocketFactory.ts");
+const TestClientFactory_1 = __nested_webpack_require_249588__(/*! ./TestClientFactory */ "./src/di-factory/client/TestClientFactory.ts");
+const PlayerLogicFactory_1 = __nested_webpack_require_249588__(/*! ../player-logic/PlayerLogicFactory */ "./src/di-factory/player-logic/PlayerLogicFactory.ts");
+const BallLogicFactory_1 = __nested_webpack_require_249588__(/*! ../ball-logic/BallLogicFactory */ "./src/di-factory/ball-logic/BallLogicFactory.ts");
 let TestClientFactoryBuilder = exports.TestClientFactoryBuilder = class TestClientFactoryBuilder {
     register(container) {
         container.bind(ClosedSocketFactory_1.ClosedSocketFactory).toSelf().inSingletonScope();
@@ -35987,14 +35987,14 @@ exports.TestClientFactoryBuilder = TestClientFactoryBuilder = __decorate([
 /*!********************************************!*\
   !*** ./src/di-factory/inversify.config.ts ***!
   \********************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_252295__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_252294__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.configureContainerForTest = exports.configureContainer = void 0;
-const ClientFactoryBuilder_1 = __nested_webpack_require_252295__(/*! ./client/ClientFactoryBuilder */ "./src/di-factory/client/ClientFactoryBuilder.ts");
-const TestClientFactoryBuilder_1 = __nested_webpack_require_252295__(/*! ./client/TestClientFactoryBuilder */ "./src/di-factory/client/TestClientFactoryBuilder.ts");
+const ClientFactoryBuilder_1 = __nested_webpack_require_252294__(/*! ./client/ClientFactoryBuilder */ "./src/di-factory/client/ClientFactoryBuilder.ts");
+const TestClientFactoryBuilder_1 = __nested_webpack_require_252294__(/*! ./client/TestClientFactoryBuilder */ "./src/di-factory/client/TestClientFactoryBuilder.ts");
 function configureContainer(container) {
     container
         .bind(ClientFactoryBuilder_1.ClientFactoryBuilder)
@@ -36023,7 +36023,7 @@ exports.configureContainerForTest = configureContainerForTest;
 /*!*************************************************************!*\
   !*** ./src/di-factory/player-logic/PlayerEmitterCreator.ts ***!
   \*************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_253857__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_253856__) {
 
 "use strict";
 
@@ -36041,9 +36041,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerEmitterCreator = void 0;
-const inversify_1 = __nested_webpack_require_253857__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_253857__(/*! ../../emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
-const EventEmitterLogicManager_1 = __nested_webpack_require_253857__(/*! ../../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
+const inversify_1 = __nested_webpack_require_253856__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_253856__(/*! ../../emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
+const EventEmitterLogicManager_1 = __nested_webpack_require_253856__(/*! ../../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
 let PlayerEmitterCreator = exports.PlayerEmitterCreator = class PlayerEmitterCreator {
     constructor(playerEmitterLogicManager, playerEmittMovement) {
         this.playerEmitterLogicManager = playerEmitterLogicManager;
@@ -36069,7 +36069,7 @@ exports.PlayerEmitterCreator = PlayerEmitterCreator = __decorate([
 /*!***********************************************************!*\
   !*** ./src/di-factory/player-logic/PlayerLogicCreator.ts ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_256565__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_256564__) {
 
 "use strict";
 
@@ -36087,11 +36087,11 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerLogicCreator = void 0;
-const inversify_1 = __nested_webpack_require_256565__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const PlayerConnectLogic_1 = __nested_webpack_require_256565__(/*! ../../socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
-const PlayerList_1 = __nested_webpack_require_256565__(/*! ../../socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
-const PlayerMovement_1 = __nested_webpack_require_256565__(/*! ../../socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
-const SocketLogicManager_1 = __nested_webpack_require_256565__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
+const inversify_1 = __nested_webpack_require_256564__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const PlayerConnectLogic_1 = __nested_webpack_require_256564__(/*! ../../socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
+const PlayerList_1 = __nested_webpack_require_256564__(/*! ../../socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
+const PlayerMovement_1 = __nested_webpack_require_256564__(/*! ../../socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
+const SocketLogicManager_1 = __nested_webpack_require_256564__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
 let PlayerLogicCreator = exports.PlayerLogicCreator = class PlayerLogicCreator {
     constructor(playerConnect, playerList, playerMovement, playerLogicManager) {
         this.playerConnect = playerConnect;
@@ -36125,7 +36125,7 @@ exports.PlayerLogicCreator = PlayerLogicCreator = __decorate([
 /*!***********************************************************!*\
   !*** ./src/di-factory/player-logic/PlayerLogicFactory.ts ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_259781__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_259780__) {
 
 "use strict";
 
@@ -36137,18 +36137,18 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerLogicFactory = void 0;
-const inversify_1 = __nested_webpack_require_259781__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const PlayerManagerCreator_1 = __nested_webpack_require_259781__(/*! ./PlayerManagerCreator */ "./src/di-factory/player-logic/PlayerManagerCreator.ts");
-const PlayerManager_1 = __nested_webpack_require_259781__(/*! ../../PlayerManager */ "./src/PlayerManager.ts");
-const PlayerLogicCreator_1 = __nested_webpack_require_259781__(/*! ./PlayerLogicCreator */ "./src/di-factory/player-logic/PlayerLogicCreator.ts");
-const PlayerConnectLogic_1 = __nested_webpack_require_259781__(/*! ../../socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
-const socket_io_client_1 = __nested_webpack_require_259781__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const PlayerList_1 = __nested_webpack_require_259781__(/*! ../../socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
-const PlayerMovement_1 = __nested_webpack_require_259781__(/*! ../../socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
-const PlayerEmitterCreator_1 = __nested_webpack_require_259781__(/*! ./PlayerEmitterCreator */ "./src/di-factory/player-logic/PlayerEmitterCreator.ts");
-const PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_259781__(/*! ../../emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
-const EventEmitterLogicManager_1 = __nested_webpack_require_259781__(/*! ../../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
-const atari_monk_ball_game_api_1 = __nested_webpack_require_259781__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
+const inversify_1 = __nested_webpack_require_259780__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const PlayerManagerCreator_1 = __nested_webpack_require_259780__(/*! ./PlayerManagerCreator */ "./src/di-factory/player-logic/PlayerManagerCreator.ts");
+const PlayerManager_1 = __nested_webpack_require_259780__(/*! ../../PlayerManager */ "./src/PlayerManager.ts");
+const PlayerLogicCreator_1 = __nested_webpack_require_259780__(/*! ./PlayerLogicCreator */ "./src/di-factory/player-logic/PlayerLogicCreator.ts");
+const PlayerConnectLogic_1 = __nested_webpack_require_259780__(/*! ../../socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
+const socket_io_client_1 = __nested_webpack_require_259780__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const PlayerList_1 = __nested_webpack_require_259780__(/*! ../../socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
+const PlayerMovement_1 = __nested_webpack_require_259780__(/*! ../../socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
+const PlayerEmitterCreator_1 = __nested_webpack_require_259780__(/*! ./PlayerEmitterCreator */ "./src/di-factory/player-logic/PlayerEmitterCreator.ts");
+const PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_259780__(/*! ../../emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
+const EventEmitterLogicManager_1 = __nested_webpack_require_259780__(/*! ../../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
+const atari_monk_ball_game_api_1 = __nested_webpack_require_259780__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
 let PlayerLogicFactory = exports.PlayerLogicFactory = class PlayerLogicFactory {
     register(container) {
         this.registerPlayerManager(container);
@@ -36223,7 +36223,7 @@ exports.PlayerLogicFactory = PlayerLogicFactory = __decorate([
 /*!*************************************************************!*\
   !*** ./src/di-factory/player-logic/PlayerManagerCreator.ts ***!
   \*************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_265492__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_265491__) {
 
 "use strict";
 
@@ -36241,9 +36241,9 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerManagerCreator = void 0;
-const inversify_1 = __nested_webpack_require_265492__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const atari_monk_ball_game_api_1 = __nested_webpack_require_265492__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
-const PlayerManager_1 = __nested_webpack_require_265492__(/*! ../../PlayerManager */ "./src/PlayerManager.ts");
+const inversify_1 = __nested_webpack_require_265491__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const atari_monk_ball_game_api_1 = __nested_webpack_require_265491__(/*! atari-monk-ball-game-api */ "./node_modules/atari-monk-ball-game-api/atari-monk-ball-game-api.js");
+const PlayerManager_1 = __nested_webpack_require_265491__(/*! ../../PlayerManager */ "./src/PlayerManager.ts");
 let PlayerManagerCreator = exports.PlayerManagerCreator = class PlayerManagerCreator {
     constructor(player, playerNpc, playerManager) {
         this.player = player;
@@ -36271,7 +36271,7 @@ exports.PlayerManagerCreator = PlayerManagerCreator = __decorate([
 /*!***********************************************************!*\
   !*** ./src/di-factory/socket-logic/SocketLogicCreator.ts ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_268086__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_268085__) {
 
 "use strict";
 
@@ -36289,11 +36289,11 @@ var __param = (this && this.__param) || function (paramIndex, decorator) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SocketLogicCreator = void 0;
-const inversify_1 = __nested_webpack_require_268086__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const ConnectErrorHandler_1 = __nested_webpack_require_268086__(/*! ../../socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
-const DisconnectHandler_1 = __nested_webpack_require_268086__(/*! ../../socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
-const socket_io_client_1 = __nested_webpack_require_268086__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const SocketLogicManager_1 = __nested_webpack_require_268086__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
+const inversify_1 = __nested_webpack_require_268085__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const ConnectErrorHandler_1 = __nested_webpack_require_268085__(/*! ../../socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
+const DisconnectHandler_1 = __nested_webpack_require_268085__(/*! ../../socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
+const socket_io_client_1 = __nested_webpack_require_268085__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const SocketLogicManager_1 = __nested_webpack_require_268085__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
 let SocketLogicCreator = exports.SocketLogicCreator = class SocketLogicCreator {
     constructor(connectErrorHandler, disconnectHandler, socketLogicManager, socket) {
         this.connectErrorHandler = connectErrorHandler;
@@ -36328,7 +36328,7 @@ exports.SocketLogicCreator = SocketLogicCreator = __decorate([
 /*!***********************************************************!*\
   !*** ./src/di-factory/socket-logic/SocketLogicFactory.ts ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_271328__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_271327__) {
 
 "use strict";
 
@@ -36340,11 +36340,11 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SocketLogicFactory = void 0;
-const inversify_1 = __nested_webpack_require_271328__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const ConnectErrorHandler_1 = __nested_webpack_require_271328__(/*! ../../socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
-const DisconnectHandler_1 = __nested_webpack_require_271328__(/*! ../../socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
-const SocketLogicCreator_1 = __nested_webpack_require_271328__(/*! ./SocketLogicCreator */ "./src/di-factory/socket-logic/SocketLogicCreator.ts");
-const SocketLogicManager_1 = __nested_webpack_require_271328__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
+const inversify_1 = __nested_webpack_require_271327__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const ConnectErrorHandler_1 = __nested_webpack_require_271327__(/*! ../../socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
+const DisconnectHandler_1 = __nested_webpack_require_271327__(/*! ../../socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
+const SocketLogicCreator_1 = __nested_webpack_require_271327__(/*! ./SocketLogicCreator */ "./src/di-factory/socket-logic/SocketLogicCreator.ts");
+const SocketLogicManager_1 = __nested_webpack_require_271327__(/*! ../../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
 let SocketLogicFactory = exports.SocketLogicFactory = class SocketLogicFactory {
     register(container) {
         container
@@ -36379,7 +36379,7 @@ exports.SocketLogicFactory = SocketLogicFactory = __decorate([
 /*!******************************************************!*\
   !*** ./src/di-factory/socket/ClosedSocketFactory.ts ***!
   \******************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_273953__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_273952__) {
 
 "use strict";
 
@@ -36391,9 +36391,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ClosedSocketFactory = void 0;
-const inversify_1 = __nested_webpack_require_273953__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const socket_io_client_1 = __nested_webpack_require_273953__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const SocketFactory_1 = __nested_webpack_require_273953__(/*! ./SocketFactory */ "./src/di-factory/socket/SocketFactory.ts");
+const inversify_1 = __nested_webpack_require_273952__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const socket_io_client_1 = __nested_webpack_require_273952__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const SocketFactory_1 = __nested_webpack_require_273952__(/*! ./SocketFactory */ "./src/di-factory/socket/SocketFactory.ts");
 let ClosedSocketFactory = exports.ClosedSocketFactory = class ClosedSocketFactory extends SocketFactory_1.SocketFactory {
     createSocket(container) {
         container
@@ -36418,7 +36418,7 @@ exports.ClosedSocketFactory = ClosedSocketFactory = __decorate([
 /*!****************************************************!*\
   !*** ./src/di-factory/socket/OpenSocketFactory.ts ***!
   \****************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_275939__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_275938__) {
 
 "use strict";
 
@@ -36430,9 +36430,9 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.OpenSocketFactory = void 0;
-const inversify_1 = __nested_webpack_require_275939__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const socket_io_client_1 = __nested_webpack_require_275939__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const SocketFactory_1 = __nested_webpack_require_275939__(/*! ./SocketFactory */ "./src/di-factory/socket/SocketFactory.ts");
+const inversify_1 = __nested_webpack_require_275938__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const socket_io_client_1 = __nested_webpack_require_275938__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const SocketFactory_1 = __nested_webpack_require_275938__(/*! ./SocketFactory */ "./src/di-factory/socket/SocketFactory.ts");
 let OpenSocketFactory = exports.OpenSocketFactory = class OpenSocketFactory extends SocketFactory_1.SocketFactory {
     createSocket(container) {
         container
@@ -36455,7 +36455,7 @@ exports.OpenSocketFactory = OpenSocketFactory = __decorate([
 /*!************************************************!*\
   !*** ./src/di-factory/socket/SocketFactory.ts ***!
   \************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_277832__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_277831__) {
 
 "use strict";
 
@@ -36467,17 +36467,17 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SocketFactory = void 0;
-const inversify_1 = __nested_webpack_require_277832__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const socket_io_client_1 = __nested_webpack_require_277832__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const SocketConfigurator_1 = __nested_webpack_require_277832__(/*! ../../SocketConfigurator */ "./src/SocketConfigurator.ts");
-const Environment_1 = __nested_webpack_require_277832__(/*! ../../Environment */ "./src/Environment.ts");
-const SocketErrorHandler_1 = __nested_webpack_require_277832__(/*! ../../SocketErrorHandler */ "./src/SocketErrorHandler.ts");
+const inversify_1 = __nested_webpack_require_277831__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const socket_io_client_1 = __nested_webpack_require_277831__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const SocketConfigurator_1 = __nested_webpack_require_277831__(/*! ../../SocketConfigurator */ "./src/SocketConfigurator.ts");
+const Environment_1 = __nested_webpack_require_277831__(/*! ../../Environment */ "./src/Environment.ts");
+const SocketErrorHandler_1 = __nested_webpack_require_277831__(/*! ../../SocketErrorHandler */ "./src/SocketErrorHandler.ts");
 let SocketFactory = exports.SocketFactory = class SocketFactory {
     register(container) {
         container
             .bind(SocketConfigurator_1.SocketConfigurator)
             .toDynamicValue(() => {
-            return new SocketConfigurator_1.SocketConfigurator({ environment: Environment_1.Environment.Development });
+            return new SocketConfigurator_1.SocketConfigurator({ environment: Environment_1.Environment.Production });
         })
             .inSingletonScope();
         container
@@ -36510,13 +36510,13 @@ exports.SocketFactory = SocketFactory = __decorate([
 /*!********************************************************!*\
   !*** ./src/emitter-logic/BallEventEmitterLogicUnit.ts ***!
   \********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_280526__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_280524__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BallEventEmitterLogicUnit = void 0;
-const EventEmitterLogicUnit_1 = __nested_webpack_require_280526__(/*! ../lib/emitter-logic/EventEmitterLogicUnit */ "./src/lib/emitter-logic/EventEmitterLogicUnit.ts");
+const EventEmitterLogicUnit_1 = __nested_webpack_require_280524__(/*! ../lib/emitter-logic/EventEmitterLogicUnit */ "./src/lib/emitter-logic/EventEmitterLogicUnit.ts");
 class BallEventEmitterLogicUnit extends EventEmitterLogicUnit_1.EventEmitterLogicUnit {
     constructor(eventName, socketEventName, socket) {
         super(eventName);
@@ -36543,13 +36543,13 @@ exports.BallEventEmitterLogicUnit = BallEventEmitterLogicUnit;
 /*!**********************************************************!*\
   !*** ./src/emitter-logic/PlayerEventEmitterLogicUnit.ts ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_281724__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_281722__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerEventEmitterLogicUnit = void 0;
-const EventEmitterLogicUnit_1 = __nested_webpack_require_281724__(/*! ../lib/emitter-logic/EventEmitterLogicUnit */ "./src/lib/emitter-logic/EventEmitterLogicUnit.ts");
+const EventEmitterLogicUnit_1 = __nested_webpack_require_281722__(/*! ../lib/emitter-logic/EventEmitterLogicUnit */ "./src/lib/emitter-logic/EventEmitterLogicUnit.ts");
 class PlayerEventEmitterLogicUnit extends EventEmitterLogicUnit_1.EventEmitterLogicUnit {
     constructor(eventName, socketEventName, socket) {
         super(eventName);
@@ -36637,13 +36637,13 @@ exports.Vector2d = Vector2d;
 /*!***********************************************************!*\
   !*** ./src/lib/emitter-logic/EventEmitterLogicManager.ts ***!
   \***********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_284295__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_284293__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.EventEmitterLogicManager = void 0;
-const LogicManagerGeneric_1 = __nested_webpack_require_284295__(/*! ../logic/LogicManagerGeneric */ "./src/lib/logic/LogicManagerGeneric.ts");
+const LogicManagerGeneric_1 = __nested_webpack_require_284293__(/*! ../logic/LogicManagerGeneric */ "./src/lib/logic/LogicManagerGeneric.ts");
 class EventEmitterLogicManager extends LogicManagerGeneric_1.LogicManagerGeneric {
     initializeEmitter(emitter) {
         this.logicUnits.forEach((unit) => {
@@ -36683,7 +36683,7 @@ exports.EventEmitterLogicUnit = EventEmitterLogicUnit;
 /*!**********************************************!*\
   !*** ./src/lib/logic/LogicManagerGeneric.ts ***!
   \**********************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_285814__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_285812__) {
 
 "use strict";
 
@@ -36695,7 +36695,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.LogicManagerGeneric = void 0;
-const inversify_1 = __nested_webpack_require_285814__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const inversify_1 = __nested_webpack_require_285812__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
 let LogicManagerGeneric = exports.LogicManagerGeneric = class LogicManagerGeneric {
     constructor() {
         this._logicUnits = [];
@@ -36718,7 +36718,7 @@ exports.LogicManagerGeneric = LogicManagerGeneric = __decorate([
 /*!****************************************************!*\
   !*** ./src/lib/socket-logic/SocketLogicManager.ts ***!
   \****************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_287316__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_287314__) {
 
 "use strict";
 
@@ -36730,8 +36730,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SocketLogicManager = void 0;
-const LogicManagerGeneric_1 = __nested_webpack_require_287316__(/*! ../logic/LogicManagerGeneric */ "./src/lib/logic/LogicManagerGeneric.ts");
-const inversify_1 = __nested_webpack_require_287316__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const LogicManagerGeneric_1 = __nested_webpack_require_287314__(/*! ../logic/LogicManagerGeneric */ "./src/lib/logic/LogicManagerGeneric.ts");
+const inversify_1 = __nested_webpack_require_287314__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
 let SocketLogicManager = exports.SocketLogicManager = class SocketLogicManager extends LogicManagerGeneric_1.LogicManagerGeneric {
     initializeSocket(socket) {
         this.logicUnits.forEach((unit) => {
@@ -36750,7 +36750,7 @@ exports.SocketLogicManager = SocketLogicManager = __decorate([
 /*!*************************************************!*\
   !*** ./src/lib/socket-logic/SocketLogicUnit.ts ***!
   \*************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_288929__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_288927__) {
 
 "use strict";
 
@@ -36765,7 +36765,7 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.SocketLogicUnit = void 0;
-const inversify_1 = __nested_webpack_require_288929__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const inversify_1 = __nested_webpack_require_288927__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
 let SocketLogicUnit = exports.SocketLogicUnit = class SocketLogicUnit {
     constructor(_eventName) {
         this._eventName = _eventName;
@@ -36786,29 +36786,29 @@ exports.SocketLogicUnit = SocketLogicUnit = __decorate([
 /*!*********************************************!*\
   !*** ./src/simple-factory/ClientFactory.ts ***!
   \*********************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_290580__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_290578__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ClientFactory = void 0;
-const socket_io_client_1 = __nested_webpack_require_290580__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
-const SocketConfigurator_1 = __nested_webpack_require_290580__(/*! ../SocketConfigurator */ "./src/SocketConfigurator.ts");
-const Environment_1 = __nested_webpack_require_290580__(/*! ../Environment */ "./src/Environment.ts");
-const SocketErrorHandler_1 = __nested_webpack_require_290580__(/*! ../SocketErrorHandler */ "./src/SocketErrorHandler.ts");
-const ConnectErrorHandler_1 = __nested_webpack_require_290580__(/*! ../socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
-const DisconnectHandler_1 = __nested_webpack_require_290580__(/*! ../socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
-const PlayerManager_1 = __nested_webpack_require_290580__(/*! ../PlayerManager */ "./src/PlayerManager.ts");
-const PlayerConnectLogic_1 = __nested_webpack_require_290580__(/*! ../socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
-const PlayerList_1 = __nested_webpack_require_290580__(/*! ../socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
-const PlayerMovement_1 = __nested_webpack_require_290580__(/*! ../socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
-const PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_290580__(/*! ../emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
-const BallManager_1 = __nested_webpack_require_290580__(/*! ../BallManager */ "./src/BallManager.ts");
-const BallMovement_1 = __nested_webpack_require_290580__(/*! ../socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
-const BallVelocity_1 = __nested_webpack_require_290580__(/*! ../socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
-const BallEventEmitterLogicUnit_1 = __nested_webpack_require_290580__(/*! ../emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
-const SocketLogicManager_1 = __nested_webpack_require_290580__(/*! ../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
-const EventEmitterLogicManager_1 = __nested_webpack_require_290580__(/*! ../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
+const socket_io_client_1 = __nested_webpack_require_290578__(/*! socket.io-client */ "./node_modules/socket.io-client/build/cjs/index.js");
+const SocketConfigurator_1 = __nested_webpack_require_290578__(/*! ../SocketConfigurator */ "./src/SocketConfigurator.ts");
+const Environment_1 = __nested_webpack_require_290578__(/*! ../Environment */ "./src/Environment.ts");
+const SocketErrorHandler_1 = __nested_webpack_require_290578__(/*! ../SocketErrorHandler */ "./src/SocketErrorHandler.ts");
+const ConnectErrorHandler_1 = __nested_webpack_require_290578__(/*! ../socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
+const DisconnectHandler_1 = __nested_webpack_require_290578__(/*! ../socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
+const PlayerManager_1 = __nested_webpack_require_290578__(/*! ../PlayerManager */ "./src/PlayerManager.ts");
+const PlayerConnectLogic_1 = __nested_webpack_require_290578__(/*! ../socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
+const PlayerList_1 = __nested_webpack_require_290578__(/*! ../socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
+const PlayerMovement_1 = __nested_webpack_require_290578__(/*! ../socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
+const PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_290578__(/*! ../emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
+const BallManager_1 = __nested_webpack_require_290578__(/*! ../BallManager */ "./src/BallManager.ts");
+const BallMovement_1 = __nested_webpack_require_290578__(/*! ../socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
+const BallVelocity_1 = __nested_webpack_require_290578__(/*! ../socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
+const BallEventEmitterLogicUnit_1 = __nested_webpack_require_290578__(/*! ../emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
+const SocketLogicManager_1 = __nested_webpack_require_290578__(/*! ../lib/socket-logic/SocketLogicManager */ "./src/lib/socket-logic/SocketLogicManager.ts");
+const EventEmitterLogicManager_1 = __nested_webpack_require_290578__(/*! ../lib/emitter-logic/EventEmitterLogicManager */ "./src/lib/emitter-logic/EventEmitterLogicManager.ts");
 class ClientFactory {
     constructor(eventEmitter, player, playerNpc, ball) {
         this.eventEmitter = eventEmitter;
@@ -36901,14 +36901,14 @@ exports.ClientFactory = ClientFactory;
 /*!******************************************!*\
   !*** ./src/socket-logic/BallMovement.ts ***!
   \******************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_297679__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_297677__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BallMovement = void 0;
-const SocketLogicUnit_1 = __nested_webpack_require_297679__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
-const Vector2d_1 = __nested_webpack_require_297679__(/*! ../lib/Vector2d */ "./src/lib/Vector2d.ts");
+const SocketLogicUnit_1 = __nested_webpack_require_297677__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const Vector2d_1 = __nested_webpack_require_297677__(/*! ../lib/Vector2d */ "./src/lib/Vector2d.ts");
 class BallMovement extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName, ballManager) {
         super(eventName);
@@ -36937,14 +36937,14 @@ exports.BallMovement = BallMovement;
 /*!******************************************!*\
   !*** ./src/socket-logic/BallVelocity.ts ***!
   \******************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_298901__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_298899__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.BallVelocity = void 0;
-const SocketLogicUnit_1 = __nested_webpack_require_298901__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
-const Vector2d_1 = __nested_webpack_require_298901__(/*! ../lib/Vector2d */ "./src/lib/Vector2d.ts");
+const SocketLogicUnit_1 = __nested_webpack_require_298899__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const Vector2d_1 = __nested_webpack_require_298899__(/*! ../lib/Vector2d */ "./src/lib/Vector2d.ts");
 class BallVelocity extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName, ballManager) {
         super(eventName);
@@ -36973,7 +36973,7 @@ exports.BallVelocity = BallVelocity;
 /*!*************************************************!*\
   !*** ./src/socket-logic/ConnectErrorHandler.ts ***!
   \*************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_300165__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_300163__) {
 
 "use strict";
 
@@ -36988,8 +36988,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.ConnectErrorHandler = void 0;
-const inversify_1 = __nested_webpack_require_300165__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const SocketLogicUnit_1 = __nested_webpack_require_300165__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const inversify_1 = __nested_webpack_require_300163__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const SocketLogicUnit_1 = __nested_webpack_require_300163__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
 let ConnectErrorHandler = exports.ConnectErrorHandler = class ConnectErrorHandler extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName) {
         super(eventName);
@@ -37010,7 +37010,7 @@ exports.ConnectErrorHandler = ConnectErrorHandler = __decorate([
 /*!***********************************************!*\
   !*** ./src/socket-logic/DisconnectHandler.ts ***!
   \***********************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_302012__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_302010__) {
 
 "use strict";
 
@@ -37025,8 +37025,8 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.DisconnectHandler = void 0;
-const inversify_1 = __nested_webpack_require_302012__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
-const SocketLogicUnit_1 = __nested_webpack_require_302012__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const inversify_1 = __nested_webpack_require_302010__(/*! inversify */ "./node_modules/inversify/es/inversify.js");
+const SocketLogicUnit_1 = __nested_webpack_require_302010__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
 let DisconnectHandler = exports.DisconnectHandler = class DisconnectHandler extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName) {
         super(eventName);
@@ -37047,13 +37047,13 @@ exports.DisconnectHandler = DisconnectHandler = __decorate([
 /*!************************************************!*\
   !*** ./src/socket-logic/PlayerConnectLogic.ts ***!
   \************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_303826__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_303824__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerConnectLogic = void 0;
-const SocketLogicUnit_1 = __nested_webpack_require_303826__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const SocketLogicUnit_1 = __nested_webpack_require_303824__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
 class PlayerConnectLogic extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName, socket, playerManager) {
         super(eventName);
@@ -37091,13 +37091,13 @@ exports.PlayerConnectLogic = PlayerConnectLogic;
 /*!****************************************!*\
   !*** ./src/socket-logic/PlayerList.ts ***!
   \****************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_305393__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_305391__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerList = void 0;
-const SocketLogicUnit_1 = __nested_webpack_require_305393__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const SocketLogicUnit_1 = __nested_webpack_require_305391__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
 class PlayerList extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName, socket, playerManager) {
         super(eventName);
@@ -37125,14 +37125,14 @@ exports.PlayerList = PlayerList;
 /*!********************************************!*\
   !*** ./src/socket-logic/PlayerMovement.ts ***!
   \********************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_306645__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_306643__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerMovement = void 0;
-const SocketLogicUnit_1 = __nested_webpack_require_306645__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
-const Vector2d_1 = __nested_webpack_require_306645__(/*! ../lib/Vector2d */ "./src/lib/Vector2d.ts");
+const SocketLogicUnit_1 = __nested_webpack_require_306643__(/*! ../lib/socket-logic/SocketLogicUnit */ "./src/lib/socket-logic/SocketLogicUnit.ts");
+const Vector2d_1 = __nested_webpack_require_306643__(/*! ../lib/Vector2d */ "./src/lib/Vector2d.ts");
 class PlayerMovement extends SocketLogicUnit_1.SocketLogicUnit {
     constructor(eventName, playerManager) {
         super(eventName);
@@ -37412,24 +37412,24 @@ exports.globalThisShim = (() => {
 /*!**********************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/index.js ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_315883__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_315881__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.nextTick = exports.parse = exports.installTimerFunctions = exports.transports = exports.Transport = exports.protocol = exports.Socket = void 0;
-const socket_js_1 = __nested_webpack_require_315883__(/*! ./socket.js */ "./node_modules/engine.io-client/build/cjs/socket.js");
+const socket_js_1 = __nested_webpack_require_315881__(/*! ./socket.js */ "./node_modules/engine.io-client/build/cjs/socket.js");
 Object.defineProperty(exports, "Socket", ({ enumerable: true, get: function () { return socket_js_1.Socket; } }));
 exports.protocol = socket_js_1.Socket.protocol;
-var transport_js_1 = __nested_webpack_require_315883__(/*! ./transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
+var transport_js_1 = __nested_webpack_require_315881__(/*! ./transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
 Object.defineProperty(exports, "Transport", ({ enumerable: true, get: function () { return transport_js_1.Transport; } }));
-var index_js_1 = __nested_webpack_require_315883__(/*! ./transports/index.js */ "./node_modules/engine.io-client/build/cjs/transports/index.js");
+var index_js_1 = __nested_webpack_require_315881__(/*! ./transports/index.js */ "./node_modules/engine.io-client/build/cjs/transports/index.js");
 Object.defineProperty(exports, "transports", ({ enumerable: true, get: function () { return index_js_1.transports; } }));
-var util_js_1 = __nested_webpack_require_315883__(/*! ./util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
+var util_js_1 = __nested_webpack_require_315881__(/*! ./util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
 Object.defineProperty(exports, "installTimerFunctions", ({ enumerable: true, get: function () { return util_js_1.installTimerFunctions; } }));
-var parseuri_js_1 = __nested_webpack_require_315883__(/*! ./contrib/parseuri.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseuri.js");
+var parseuri_js_1 = __nested_webpack_require_315881__(/*! ./contrib/parseuri.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseuri.js");
 Object.defineProperty(exports, "parse", ({ enumerable: true, get: function () { return parseuri_js_1.parse; } }));
-var websocket_constructor_js_1 = __nested_webpack_require_315883__(/*! ./transports/websocket-constructor.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js");
+var websocket_constructor_js_1 = __nested_webpack_require_315881__(/*! ./transports/websocket-constructor.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js");
 Object.defineProperty(exports, "nextTick", ({ enumerable: true, get: function () { return websocket_constructor_js_1.nextTick; } }));
 
 
@@ -37439,7 +37439,7 @@ Object.defineProperty(exports, "nextTick", ({ enumerable: true, get: function ()
 /*!***********************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/socket.js ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_318060__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_318058__) {
 
 "use strict";
 
@@ -37448,13 +37448,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Socket = void 0;
-const index_js_1 = __nested_webpack_require_318060__(/*! ./transports/index.js */ "./node_modules/engine.io-client/build/cjs/transports/index.js");
-const util_js_1 = __nested_webpack_require_318060__(/*! ./util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
-const parseqs_js_1 = __nested_webpack_require_318060__(/*! ./contrib/parseqs.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseqs.js");
-const parseuri_js_1 = __nested_webpack_require_318060__(/*! ./contrib/parseuri.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseuri.js");
-const debug_1 = __importDefault(__nested_webpack_require_318060__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
-const component_emitter_1 = __nested_webpack_require_318060__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
-const engine_io_parser_1 = __nested_webpack_require_318060__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
+const index_js_1 = __nested_webpack_require_318058__(/*! ./transports/index.js */ "./node_modules/engine.io-client/build/cjs/transports/index.js");
+const util_js_1 = __nested_webpack_require_318058__(/*! ./util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
+const parseqs_js_1 = __nested_webpack_require_318058__(/*! ./contrib/parseqs.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseqs.js");
+const parseuri_js_1 = __nested_webpack_require_318058__(/*! ./contrib/parseuri.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseuri.js");
+const debug_1 = __importDefault(__nested_webpack_require_318058__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const component_emitter_1 = __nested_webpack_require_318058__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
+const engine_io_parser_1 = __nested_webpack_require_318058__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
 const debug = (0, debug_1.default)("engine.io-client:socket"); // debug()
 class Socket extends component_emitter_1.Emitter {
     /**
@@ -38074,7 +38074,7 @@ Socket.protocol = engine_io_parser_1.protocol;
 /*!**************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transport.js ***!
   \**************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_340665__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_340663__) {
 
 "use strict";
 
@@ -38083,11 +38083,11 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Transport = void 0;
-const engine_io_parser_1 = __nested_webpack_require_340665__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
-const component_emitter_1 = __nested_webpack_require_340665__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
-const util_js_1 = __nested_webpack_require_340665__(/*! ./util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
-const debug_1 = __importDefault(__nested_webpack_require_340665__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
-const parseqs_js_1 = __nested_webpack_require_340665__(/*! ./contrib/parseqs.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseqs.js");
+const engine_io_parser_1 = __nested_webpack_require_340663__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
+const component_emitter_1 = __nested_webpack_require_340663__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
+const util_js_1 = __nested_webpack_require_340663__(/*! ./util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
+const debug_1 = __importDefault(__nested_webpack_require_340663__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const parseqs_js_1 = __nested_webpack_require_340663__(/*! ./contrib/parseqs.js */ "./node_modules/engine.io-client/build/cjs/contrib/parseqs.js");
 const debug = (0, debug_1.default)("engine.io-client:transport"); // debug()
 class TransportError extends Error {
     constructor(reason, description, context) {
@@ -38236,15 +38236,15 @@ exports.Transport = Transport;
 /*!*********************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transports/index.js ***!
   \*********************************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_345470__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_345468__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.transports = void 0;
-const polling_js_1 = __nested_webpack_require_345470__(/*! ./polling.js */ "./node_modules/engine.io-client/build/cjs/transports/polling.js");
-const websocket_js_1 = __nested_webpack_require_345470__(/*! ./websocket.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket.js");
-const webtransport_js_1 = __nested_webpack_require_345470__(/*! ./webtransport.js */ "./node_modules/engine.io-client/build/cjs/transports/webtransport.js");
+const polling_js_1 = __nested_webpack_require_345468__(/*! ./polling.js */ "./node_modules/engine.io-client/build/cjs/transports/polling.js");
+const websocket_js_1 = __nested_webpack_require_345468__(/*! ./websocket.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket.js");
+const webtransport_js_1 = __nested_webpack_require_345468__(/*! ./webtransport.js */ "./node_modules/engine.io-client/build/cjs/transports/webtransport.js");
 exports.transports = {
     websocket: websocket_js_1.WS,
     webtransport: webtransport_js_1.WT,
@@ -38258,7 +38258,7 @@ exports.transports = {
 /*!***********************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transports/polling.js ***!
   \***********************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_346515__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_346513__) {
 
 "use strict";
 
@@ -38267,14 +38267,14 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Request = exports.Polling = void 0;
-const transport_js_1 = __nested_webpack_require_346515__(/*! ../transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
-const debug_1 = __importDefault(__nested_webpack_require_346515__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
-const yeast_js_1 = __nested_webpack_require_346515__(/*! ../contrib/yeast.js */ "./node_modules/engine.io-client/build/cjs/contrib/yeast.js");
-const engine_io_parser_1 = __nested_webpack_require_346515__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
-const xmlhttprequest_js_1 = __nested_webpack_require_346515__(/*! ./xmlhttprequest.js */ "./node_modules/engine.io-client/build/cjs/transports/xmlhttprequest.browser.js");
-const component_emitter_1 = __nested_webpack_require_346515__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
-const util_js_1 = __nested_webpack_require_346515__(/*! ../util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
-const globalThis_js_1 = __nested_webpack_require_346515__(/*! ../globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
+const transport_js_1 = __nested_webpack_require_346513__(/*! ../transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
+const debug_1 = __importDefault(__nested_webpack_require_346513__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const yeast_js_1 = __nested_webpack_require_346513__(/*! ../contrib/yeast.js */ "./node_modules/engine.io-client/build/cjs/contrib/yeast.js");
+const engine_io_parser_1 = __nested_webpack_require_346513__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
+const xmlhttprequest_js_1 = __nested_webpack_require_346513__(/*! ./xmlhttprequest.js */ "./node_modules/engine.io-client/build/cjs/transports/xmlhttprequest.browser.js");
+const component_emitter_1 = __nested_webpack_require_346513__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
+const util_js_1 = __nested_webpack_require_346513__(/*! ../util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
+const globalThis_js_1 = __nested_webpack_require_346513__(/*! ../globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
 const debug = (0, debug_1.default)("engine.io-client:polling"); // debug()
 function empty() { }
 const hasXHR2 = (function () {
@@ -38683,13 +38683,13 @@ function unloadHandler() {
 /*!*********************************************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js ***!
   \*********************************************************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_360305__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_360303__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.defaultBinaryType = exports.usingBrowserWebSocket = exports.WebSocket = exports.nextTick = void 0;
-const globalThis_js_1 = __nested_webpack_require_360305__(/*! ../globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
+const globalThis_js_1 = __nested_webpack_require_360303__(/*! ../globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
 exports.nextTick = (() => {
     const isPromiseAvailable = typeof Promise === "function" && typeof Promise.resolve === "function";
     if (isPromiseAvailable) {
@@ -38710,7 +38710,7 @@ exports.defaultBinaryType = "arraybuffer";
 /*!*************************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transports/websocket.js ***!
   \*************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_361518__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_361516__) {
 
 "use strict";
 
@@ -38719,12 +38719,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WS = void 0;
-const transport_js_1 = __nested_webpack_require_361518__(/*! ../transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
-const yeast_js_1 = __nested_webpack_require_361518__(/*! ../contrib/yeast.js */ "./node_modules/engine.io-client/build/cjs/contrib/yeast.js");
-const util_js_1 = __nested_webpack_require_361518__(/*! ../util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
-const websocket_constructor_js_1 = __nested_webpack_require_361518__(/*! ./websocket-constructor.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js");
-const debug_1 = __importDefault(__nested_webpack_require_361518__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
-const engine_io_parser_1 = __nested_webpack_require_361518__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
+const transport_js_1 = __nested_webpack_require_361516__(/*! ../transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
+const yeast_js_1 = __nested_webpack_require_361516__(/*! ../contrib/yeast.js */ "./node_modules/engine.io-client/build/cjs/contrib/yeast.js");
+const util_js_1 = __nested_webpack_require_361516__(/*! ../util.js */ "./node_modules/engine.io-client/build/cjs/util.js");
+const websocket_constructor_js_1 = __nested_webpack_require_361516__(/*! ./websocket-constructor.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js");
+const debug_1 = __importDefault(__nested_webpack_require_361516__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const engine_io_parser_1 = __nested_webpack_require_361516__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
 const debug = (0, debug_1.default)("engine.io-client:websocket"); // debug()
 // detect ReactNative environment
 const isReactNative = typeof navigator !== "undefined" &&
@@ -38883,7 +38883,7 @@ exports.WS = WS;
 /*!****************************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transports/webtransport.js ***!
   \****************************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_368505__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_368503__) {
 
 "use strict";
 
@@ -38892,10 +38892,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.WT = void 0;
-const transport_js_1 = __nested_webpack_require_368505__(/*! ../transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
-const websocket_constructor_js_1 = __nested_webpack_require_368505__(/*! ./websocket-constructor.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js");
-const engine_io_parser_1 = __nested_webpack_require_368505__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
-const debug_1 = __importDefault(__nested_webpack_require_368505__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const transport_js_1 = __nested_webpack_require_368503__(/*! ../transport.js */ "./node_modules/engine.io-client/build/cjs/transport.js");
+const websocket_constructor_js_1 = __nested_webpack_require_368503__(/*! ./websocket-constructor.js */ "./node_modules/engine.io-client/build/cjs/transports/websocket-constructor.browser.js");
+const engine_io_parser_1 = __nested_webpack_require_368503__(/*! engine.io-parser */ "./node_modules/engine.io-parser/build/cjs/index.js");
+const debug_1 = __importDefault(__nested_webpack_require_368503__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
 const debug = (0, debug_1.default)("engine.io-client:webtransport"); // debug()
 function shouldIncludeBinaryHeader(packet, encoded) {
     // 48 === "0".charCodeAt(0) (OPEN packet type)
@@ -38998,15 +38998,15 @@ exports.WT = WT;
 /*!**************************************************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/transports/xmlhttprequest.browser.js ***!
   \**************************************************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_373468__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_373466__) => {
 
 "use strict";
 
 // browser shim for xmlhttprequest module
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.createCookieJar = exports.XHR = void 0;
-const has_cors_js_1 = __nested_webpack_require_373468__(/*! ../contrib/has-cors.js */ "./node_modules/engine.io-client/build/cjs/contrib/has-cors.js");
-const globalThis_js_1 = __nested_webpack_require_373468__(/*! ../globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
+const has_cors_js_1 = __nested_webpack_require_373466__(/*! ../contrib/has-cors.js */ "./node_modules/engine.io-client/build/cjs/contrib/has-cors.js");
+const globalThis_js_1 = __nested_webpack_require_373466__(/*! ../globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
 function XHR(opts) {
     const xdomain = opts.xdomain;
     // XMLHttpRequest can be disabled on IE
@@ -39034,13 +39034,13 @@ exports.createCookieJar = createCookieJar;
 /*!*********************************************************!*\
   !*** ./node_modules/engine.io-client/build/cjs/util.js ***!
   \*********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_374799__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_374797__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.byteLength = exports.installTimerFunctions = exports.pick = void 0;
-const globalThis_js_1 = __nested_webpack_require_374799__(/*! ./globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
+const globalThis_js_1 = __nested_webpack_require_374797__(/*! ./globalThis.js */ "./node_modules/engine.io-client/build/cjs/globalThis.browser.js");
 function pick(obj, ...attr) {
     return attr.reduce((acc, k) => {
         if (obj.hasOwnProperty(k)) {
@@ -39192,14 +39192,14 @@ exports.decode = decode;
 /*!*************************************************************************!*\
   !*** ./node_modules/engine.io-parser/build/cjs/decodePacket.browser.js ***!
   \*************************************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_380780__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_380778__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.decodePacket = void 0;
-const commons_js_1 = __nested_webpack_require_380780__(/*! ./commons.js */ "./node_modules/engine.io-parser/build/cjs/commons.js");
-const base64_arraybuffer_js_1 = __nested_webpack_require_380780__(/*! ./contrib/base64-arraybuffer.js */ "./node_modules/engine.io-parser/build/cjs/contrib/base64-arraybuffer.js");
+const commons_js_1 = __nested_webpack_require_380778__(/*! ./commons.js */ "./node_modules/engine.io-parser/build/cjs/commons.js");
+const base64_arraybuffer_js_1 = __nested_webpack_require_380778__(/*! ./contrib/base64-arraybuffer.js */ "./node_modules/engine.io-parser/build/cjs/contrib/base64-arraybuffer.js");
 const withNativeArrayBuffer = typeof ArrayBuffer === "function";
 const decodePacket = (encodedPacket, binaryType) => {
     if (typeof encodedPacket !== "string") {
@@ -39269,13 +39269,13 @@ const mapBinary = (data, binaryType) => {
 /*!*************************************************************************!*\
   !*** ./node_modules/engine.io-parser/build/cjs/encodePacket.browser.js ***!
   \*************************************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_383479__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_383477__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.encodePacket = exports.encodePacketToBinary = void 0;
-const commons_js_1 = __nested_webpack_require_383479__(/*! ./commons.js */ "./node_modules/engine.io-parser/build/cjs/commons.js");
+const commons_js_1 = __nested_webpack_require_383477__(/*! ./commons.js */ "./node_modules/engine.io-parser/build/cjs/commons.js");
 const withNativeBlob = typeof Blob === "function" ||
     (typeof Blob !== "undefined" &&
         Object.prototype.toString.call(Blob) === "[object BlobConstructor]");
@@ -39355,16 +39355,16 @@ exports.encodePacketToBinary = encodePacketToBinary;
 /*!**********************************************************!*\
   !*** ./node_modules/engine.io-parser/build/cjs/index.js ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_386395__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_386393__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.decodePayload = exports.decodePacket = exports.encodePayload = exports.encodePacketToBinary = exports.encodePacket = exports.protocol = exports.decodePacketFromBinary = void 0;
-const encodePacket_js_1 = __nested_webpack_require_386395__(/*! ./encodePacket.js */ "./node_modules/engine.io-parser/build/cjs/encodePacket.browser.js");
+const encodePacket_js_1 = __nested_webpack_require_386393__(/*! ./encodePacket.js */ "./node_modules/engine.io-parser/build/cjs/encodePacket.browser.js");
 Object.defineProperty(exports, "encodePacket", ({ enumerable: true, get: function () { return encodePacket_js_1.encodePacket; } }));
 Object.defineProperty(exports, "encodePacketToBinary", ({ enumerable: true, get: function () { return encodePacket_js_1.encodePacketToBinary; } }));
-const decodePacket_js_1 = __nested_webpack_require_386395__(/*! ./decodePacket.js */ "./node_modules/engine.io-parser/build/cjs/decodePacket.browser.js");
+const decodePacket_js_1 = __nested_webpack_require_386393__(/*! ./decodePacket.js */ "./node_modules/engine.io-parser/build/cjs/decodePacket.browser.js");
 Object.defineProperty(exports, "decodePacket", ({ enumerable: true, get: function () { return decodePacket_js_1.decodePacket; } }));
 const SEPARATOR = String.fromCharCode(30); // see https://en.wikipedia.org/wiki/Delimiter#ASCII_delimited_text
 const encodePayload = (packets, callback) => {
@@ -39498,7 +39498,7 @@ Backoff.prototype.setJitter = function (jitter) {
 /*!**********************************************************!*\
   !*** ./node_modules/socket.io-client/build/cjs/index.js ***!
   \**********************************************************/
-/***/ (function(module, exports, __nested_webpack_require_391338__) {
+/***/ (function(module, exports, __nested_webpack_require_391336__) {
 
 "use strict";
 
@@ -39507,12 +39507,12 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports["default"] = exports.connect = exports.io = exports.Socket = exports.Manager = exports.protocol = void 0;
-const url_js_1 = __nested_webpack_require_391338__(/*! ./url.js */ "./node_modules/socket.io-client/build/cjs/url.js");
-const manager_js_1 = __nested_webpack_require_391338__(/*! ./manager.js */ "./node_modules/socket.io-client/build/cjs/manager.js");
+const url_js_1 = __nested_webpack_require_391336__(/*! ./url.js */ "./node_modules/socket.io-client/build/cjs/url.js");
+const manager_js_1 = __nested_webpack_require_391336__(/*! ./manager.js */ "./node_modules/socket.io-client/build/cjs/manager.js");
 Object.defineProperty(exports, "Manager", ({ enumerable: true, get: function () { return manager_js_1.Manager; } }));
-const socket_js_1 = __nested_webpack_require_391338__(/*! ./socket.js */ "./node_modules/socket.io-client/build/cjs/socket.js");
+const socket_js_1 = __nested_webpack_require_391336__(/*! ./socket.js */ "./node_modules/socket.io-client/build/cjs/socket.js");
 Object.defineProperty(exports, "Socket", ({ enumerable: true, get: function () { return socket_js_1.Socket; } }));
-const debug_1 = __importDefault(__nested_webpack_require_391338__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const debug_1 = __importDefault(__nested_webpack_require_391336__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
 const debug = debug_1.default("socket.io-client"); // debug()
 /**
  * Managers cache.
@@ -39566,7 +39566,7 @@ Object.assign(lookup, {
  *
  * @public
  */
-var socket_io_parser_1 = __nested_webpack_require_391338__(/*! socket.io-parser */ "./node_modules/socket.io-parser/build/cjs/index.js");
+var socket_io_parser_1 = __nested_webpack_require_391336__(/*! socket.io-parser */ "./node_modules/socket.io-parser/build/cjs/index.js");
 Object.defineProperty(exports, "protocol", ({ enumerable: true, get: function () { return socket_io_parser_1.protocol; } }));
 
 module.exports = lookup;
@@ -39578,7 +39578,7 @@ module.exports = lookup;
 /*!************************************************************!*\
   !*** ./node_modules/socket.io-client/build/cjs/manager.js ***!
   \************************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_394455__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_394453__) {
 
 "use strict";
 
@@ -39606,13 +39606,13 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Manager = void 0;
-const engine_io_client_1 = __nested_webpack_require_394455__(/*! engine.io-client */ "./node_modules/engine.io-client/build/cjs/index.js");
-const socket_js_1 = __nested_webpack_require_394455__(/*! ./socket.js */ "./node_modules/socket.io-client/build/cjs/socket.js");
-const parser = __importStar(__nested_webpack_require_394455__(/*! socket.io-parser */ "./node_modules/socket.io-parser/build/cjs/index.js"));
-const on_js_1 = __nested_webpack_require_394455__(/*! ./on.js */ "./node_modules/socket.io-client/build/cjs/on.js");
-const backo2_js_1 = __nested_webpack_require_394455__(/*! ./contrib/backo2.js */ "./node_modules/socket.io-client/build/cjs/contrib/backo2.js");
-const component_emitter_1 = __nested_webpack_require_394455__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
-const debug_1 = __importDefault(__nested_webpack_require_394455__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const engine_io_client_1 = __nested_webpack_require_394453__(/*! engine.io-client */ "./node_modules/engine.io-client/build/cjs/index.js");
+const socket_js_1 = __nested_webpack_require_394453__(/*! ./socket.js */ "./node_modules/socket.io-client/build/cjs/socket.js");
+const parser = __importStar(__nested_webpack_require_394453__(/*! socket.io-parser */ "./node_modules/socket.io-parser/build/cjs/index.js"));
+const on_js_1 = __nested_webpack_require_394453__(/*! ./on.js */ "./node_modules/socket.io-client/build/cjs/on.js");
+const backo2_js_1 = __nested_webpack_require_394453__(/*! ./contrib/backo2.js */ "./node_modules/socket.io-client/build/cjs/contrib/backo2.js");
+const component_emitter_1 = __nested_webpack_require_394453__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
+const debug_1 = __importDefault(__nested_webpack_require_394453__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
 const debug = debug_1.default("socket.io-client:manager"); // debug()
 class Manager extends component_emitter_1.Emitter {
     constructor(uri, opts) {
@@ -40013,7 +40013,7 @@ exports.on = on;
 /*!***********************************************************!*\
   !*** ./node_modules/socket.io-client/build/cjs/socket.js ***!
   \***********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_408320__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_408318__) {
 
 "use strict";
 
@@ -40022,10 +40022,10 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Socket = void 0;
-const socket_io_parser_1 = __nested_webpack_require_408320__(/*! socket.io-parser */ "./node_modules/socket.io-parser/build/cjs/index.js");
-const on_js_1 = __nested_webpack_require_408320__(/*! ./on.js */ "./node_modules/socket.io-client/build/cjs/on.js");
-const component_emitter_1 = __nested_webpack_require_408320__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
-const debug_1 = __importDefault(__nested_webpack_require_408320__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const socket_io_parser_1 = __nested_webpack_require_408318__(/*! socket.io-parser */ "./node_modules/socket.io-parser/build/cjs/index.js");
+const on_js_1 = __nested_webpack_require_408318__(/*! ./on.js */ "./node_modules/socket.io-client/build/cjs/on.js");
+const component_emitter_1 = __nested_webpack_require_408318__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
+const debug_1 = __importDefault(__nested_webpack_require_408318__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
 const debug = debug_1.default("socket.io-client:socket"); // debug()
 /**
  * Internal events.
@@ -40890,7 +40890,7 @@ exports.Socket = Socket;
 /*!********************************************************!*\
   !*** ./node_modules/socket.io-client/build/cjs/url.js ***!
   \********************************************************/
-/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_434616__) {
+/***/ (function(__unused_webpack_module, exports, __nested_webpack_require_434614__) {
 
 "use strict";
 
@@ -40899,8 +40899,8 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 };
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.url = void 0;
-const engine_io_client_1 = __nested_webpack_require_434616__(/*! engine.io-client */ "./node_modules/engine.io-client/build/cjs/index.js");
-const debug_1 = __importDefault(__nested_webpack_require_434616__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
+const engine_io_client_1 = __nested_webpack_require_434614__(/*! engine.io-client */ "./node_modules/engine.io-client/build/cjs/index.js");
+const debug_1 = __importDefault(__nested_webpack_require_434614__(/*! debug */ "./node_modules/debug/src/browser.js")); // debug()
 const debug = debug_1.default("socket.io-client:url"); // debug()
 /**
  * URL parser.
@@ -40971,13 +40971,13 @@ exports.url = url;
 /*!***********************************************************!*\
   !*** ./node_modules/socket.io-parser/build/cjs/binary.js ***!
   \***********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_437291__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_437289__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.reconstructPacket = exports.deconstructPacket = void 0;
-const is_binary_js_1 = __nested_webpack_require_437291__(/*! ./is-binary.js */ "./node_modules/socket.io-parser/build/cjs/is-binary.js");
+const is_binary_js_1 = __nested_webpack_require_437289__(/*! ./is-binary.js */ "./node_modules/socket.io-parser/build/cjs/is-binary.js");
 /**
  * Replaces every Buffer | ArrayBuffer | Blob | File in packet with a numbered placeholder.
  *
@@ -41070,16 +41070,16 @@ function _reconstructPacket(data, buffers) {
 /*!**********************************************************!*\
   !*** ./node_modules/socket.io-parser/build/cjs/index.js ***!
   \**********************************************************/
-/***/ ((__unused_webpack_module, exports, __nested_webpack_require_440692__) => {
+/***/ ((__unused_webpack_module, exports, __nested_webpack_require_440690__) => {
 
 "use strict";
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.Decoder = exports.Encoder = exports.PacketType = exports.protocol = void 0;
-const component_emitter_1 = __nested_webpack_require_440692__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
-const binary_js_1 = __nested_webpack_require_440692__(/*! ./binary.js */ "./node_modules/socket.io-parser/build/cjs/binary.js");
-const is_binary_js_1 = __nested_webpack_require_440692__(/*! ./is-binary.js */ "./node_modules/socket.io-parser/build/cjs/is-binary.js");
-const debug_1 = __nested_webpack_require_440692__(/*! debug */ "./node_modules/debug/src/browser.js"); // debug()
+const component_emitter_1 = __nested_webpack_require_440690__(/*! @socket.io/component-emitter */ "./node_modules/@socket.io/component-emitter/index.mjs");
+const binary_js_1 = __nested_webpack_require_440690__(/*! ./binary.js */ "./node_modules/socket.io-parser/build/cjs/binary.js");
+const is_binary_js_1 = __nested_webpack_require_440690__(/*! ./is-binary.js */ "./node_modules/socket.io-parser/build/cjs/is-binary.js");
+const debug_1 = __nested_webpack_require_440690__(/*! debug */ "./node_modules/debug/src/browser.js"); // debug()
 const debug = (0, debug_1.default)("socket.io-parser"); // debug()
 /**
  * These strings must not be used as event names, as they have a special meaning.
@@ -41468,11 +41468,11 @@ exports.hasBinary = hasBinary;
 /*!*************************************************************!*\
   !*** ./node_modules/@socket.io/component-emitter/index.mjs ***!
   \*************************************************************/
-/***/ ((__unused_webpack___webpack_module__, __nested_webpack_exports__, __nested_webpack_require_453931__) => {
+/***/ ((__unused_webpack___webpack_module__, __nested_webpack_exports__, __nested_webpack_require_453929__) => {
 
 "use strict";
-__nested_webpack_require_453931__.r(__nested_webpack_exports__);
-/* harmony export */ __nested_webpack_require_453931__.d(__nested_webpack_exports__, {
+__nested_webpack_require_453929__.r(__nested_webpack_exports__);
+/* harmony export */ __nested_webpack_require_453929__.d(__nested_webpack_exports__, {
 /* harmony export */   Emitter: () => (/* binding */ Emitter)
 /* harmony export */ });
 /**
@@ -41654,7 +41654,7 @@ Emitter.prototype.hasListeners = function(event){
 /******/ 	var __webpack_module_cache__ = {};
 /******/ 	
 /******/ 	// The require function
-/******/ 	function __nested_webpack_require_457704__(moduleId) {
+/******/ 	function __nested_webpack_require_457702__(moduleId) {
 /******/ 		// Check if module is in cache
 /******/ 		var cachedModule = __webpack_module_cache__[moduleId];
 /******/ 		if (cachedModule !== undefined) {
@@ -41668,7 +41668,7 @@ Emitter.prototype.hasListeners = function(event){
 /******/ 		};
 /******/ 	
 /******/ 		// Execute the module function
-/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_457704__);
+/******/ 		__webpack_modules__[moduleId].call(module.exports, module, module.exports, __nested_webpack_require_457702__);
 /******/ 	
 /******/ 		// Return the exports of the module
 /******/ 		return module.exports;
@@ -41678,9 +41678,9 @@ Emitter.prototype.hasListeners = function(event){
 /******/ 	/* webpack/runtime/define property getters */
 /******/ 	(() => {
 /******/ 		// define getter functions for harmony exports
-/******/ 		__nested_webpack_require_457704__.d = (exports, definition) => {
+/******/ 		__nested_webpack_require_457702__.d = (exports, definition) => {
 /******/ 			for(var key in definition) {
-/******/ 				if(__nested_webpack_require_457704__.o(definition, key) && !__nested_webpack_require_457704__.o(exports, key)) {
+/******/ 				if(__nested_webpack_require_457702__.o(definition, key) && !__nested_webpack_require_457702__.o(exports, key)) {
 /******/ 					Object.defineProperty(exports, key, { enumerable: true, get: definition[key] });
 /******/ 				}
 /******/ 			}
@@ -41689,13 +41689,13 @@ Emitter.prototype.hasListeners = function(event){
 /******/ 	
 /******/ 	/* webpack/runtime/hasOwnProperty shorthand */
 /******/ 	(() => {
-/******/ 		__nested_webpack_require_457704__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
+/******/ 		__nested_webpack_require_457702__.o = (obj, prop) => (Object.prototype.hasOwnProperty.call(obj, prop))
 /******/ 	})();
 /******/ 	
 /******/ 	/* webpack/runtime/make namespace object */
 /******/ 	(() => {
 /******/ 		// define __esModule on exports
-/******/ 		__nested_webpack_require_457704__.r = (exports) => {
+/******/ 		__nested_webpack_require_457702__.r = (exports) => {
 /******/ 			if(typeof Symbol !== 'undefined' && Symbol.toStringTag) {
 /******/ 				Object.defineProperty(exports, Symbol.toStringTag, { value: 'Module' });
 /******/ 			}
@@ -41715,39 +41715,39 @@ var exports = __nested_webpack_exports__;
 
 Object.defineProperty(exports, "__esModule", ({ value: true }));
 exports.PlayerManagerCreator = exports.configureContainer = exports.ClientFactory = exports.BallManager = exports.SocketErrorHandler = exports.SocketConfigurator = exports.PlayerManager = exports.PlayerMovement = exports.PlayerList = exports.PlayerConnectLogic = exports.PlayerEventEmitterLogicUnit = exports.Environment = exports.DisconnectHandler = exports.ConnectErrorHandler = exports.BallVelocity = exports.BallMovement = exports.BallEventEmitterLogicUnit = void 0;
-var BallEventEmitterLogicUnit_1 = __nested_webpack_require_457704__(/*! ./emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
+var BallEventEmitterLogicUnit_1 = __nested_webpack_require_457702__(/*! ./emitter-logic/BallEventEmitterLogicUnit */ "./src/emitter-logic/BallEventEmitterLogicUnit.ts");
 Object.defineProperty(exports, "BallEventEmitterLogicUnit", ({ enumerable: true, get: function () { return BallEventEmitterLogicUnit_1.BallEventEmitterLogicUnit; } }));
-var BallMovement_1 = __nested_webpack_require_457704__(/*! ./socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
+var BallMovement_1 = __nested_webpack_require_457702__(/*! ./socket-logic/BallMovement */ "./src/socket-logic/BallMovement.ts");
 Object.defineProperty(exports, "BallMovement", ({ enumerable: true, get: function () { return BallMovement_1.BallMovement; } }));
-var BallVelocity_1 = __nested_webpack_require_457704__(/*! ./socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
+var BallVelocity_1 = __nested_webpack_require_457702__(/*! ./socket-logic/BallVelocity */ "./src/socket-logic/BallVelocity.ts");
 Object.defineProperty(exports, "BallVelocity", ({ enumerable: true, get: function () { return BallVelocity_1.BallVelocity; } }));
-var ConnectErrorHandler_1 = __nested_webpack_require_457704__(/*! ./socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
+var ConnectErrorHandler_1 = __nested_webpack_require_457702__(/*! ./socket-logic/ConnectErrorHandler */ "./src/socket-logic/ConnectErrorHandler.ts");
 Object.defineProperty(exports, "ConnectErrorHandler", ({ enumerable: true, get: function () { return ConnectErrorHandler_1.ConnectErrorHandler; } }));
-var DisconnectHandler_1 = __nested_webpack_require_457704__(/*! ./socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
+var DisconnectHandler_1 = __nested_webpack_require_457702__(/*! ./socket-logic/DisconnectHandler */ "./src/socket-logic/DisconnectHandler.ts");
 Object.defineProperty(exports, "DisconnectHandler", ({ enumerable: true, get: function () { return DisconnectHandler_1.DisconnectHandler; } }));
-var Environment_1 = __nested_webpack_require_457704__(/*! ./Environment */ "./src/Environment.ts");
+var Environment_1 = __nested_webpack_require_457702__(/*! ./Environment */ "./src/Environment.ts");
 Object.defineProperty(exports, "Environment", ({ enumerable: true, get: function () { return Environment_1.Environment; } }));
-var PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_457704__(/*! ./emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
+var PlayerEventEmitterLogicUnit_1 = __nested_webpack_require_457702__(/*! ./emitter-logic/PlayerEventEmitterLogicUnit */ "./src/emitter-logic/PlayerEventEmitterLogicUnit.ts");
 Object.defineProperty(exports, "PlayerEventEmitterLogicUnit", ({ enumerable: true, get: function () { return PlayerEventEmitterLogicUnit_1.PlayerEventEmitterLogicUnit; } }));
-var PlayerConnectLogic_1 = __nested_webpack_require_457704__(/*! ./socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
+var PlayerConnectLogic_1 = __nested_webpack_require_457702__(/*! ./socket-logic/PlayerConnectLogic */ "./src/socket-logic/PlayerConnectLogic.ts");
 Object.defineProperty(exports, "PlayerConnectLogic", ({ enumerable: true, get: function () { return PlayerConnectLogic_1.PlayerConnectLogic; } }));
-var PlayerList_1 = __nested_webpack_require_457704__(/*! ./socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
+var PlayerList_1 = __nested_webpack_require_457702__(/*! ./socket-logic/PlayerList */ "./src/socket-logic/PlayerList.ts");
 Object.defineProperty(exports, "PlayerList", ({ enumerable: true, get: function () { return PlayerList_1.PlayerList; } }));
-var PlayerMovement_1 = __nested_webpack_require_457704__(/*! ./socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
+var PlayerMovement_1 = __nested_webpack_require_457702__(/*! ./socket-logic/PlayerMovement */ "./src/socket-logic/PlayerMovement.ts");
 Object.defineProperty(exports, "PlayerMovement", ({ enumerable: true, get: function () { return PlayerMovement_1.PlayerMovement; } }));
-var PlayerManager_1 = __nested_webpack_require_457704__(/*! ./PlayerManager */ "./src/PlayerManager.ts");
+var PlayerManager_1 = __nested_webpack_require_457702__(/*! ./PlayerManager */ "./src/PlayerManager.ts");
 Object.defineProperty(exports, "PlayerManager", ({ enumerable: true, get: function () { return PlayerManager_1.PlayerManager; } }));
-var SocketConfigurator_1 = __nested_webpack_require_457704__(/*! ./SocketConfigurator */ "./src/SocketConfigurator.ts");
+var SocketConfigurator_1 = __nested_webpack_require_457702__(/*! ./SocketConfigurator */ "./src/SocketConfigurator.ts");
 Object.defineProperty(exports, "SocketConfigurator", ({ enumerable: true, get: function () { return SocketConfigurator_1.SocketConfigurator; } }));
-var SocketErrorHandler_1 = __nested_webpack_require_457704__(/*! ./SocketErrorHandler */ "./src/SocketErrorHandler.ts");
+var SocketErrorHandler_1 = __nested_webpack_require_457702__(/*! ./SocketErrorHandler */ "./src/SocketErrorHandler.ts");
 Object.defineProperty(exports, "SocketErrorHandler", ({ enumerable: true, get: function () { return SocketErrorHandler_1.SocketErrorHandler; } }));
-var BallManager_1 = __nested_webpack_require_457704__(/*! ./BallManager */ "./src/BallManager.ts");
+var BallManager_1 = __nested_webpack_require_457702__(/*! ./BallManager */ "./src/BallManager.ts");
 Object.defineProperty(exports, "BallManager", ({ enumerable: true, get: function () { return BallManager_1.BallManager; } }));
-var ClientFactory_1 = __nested_webpack_require_457704__(/*! ./simple-factory/ClientFactory */ "./src/simple-factory/ClientFactory.ts");
+var ClientFactory_1 = __nested_webpack_require_457702__(/*! ./simple-factory/ClientFactory */ "./src/simple-factory/ClientFactory.ts");
 Object.defineProperty(exports, "ClientFactory", ({ enumerable: true, get: function () { return ClientFactory_1.ClientFactory; } }));
-var inversify_config_1 = __nested_webpack_require_457704__(/*! ./di-factory/inversify.config */ "./src/di-factory/inversify.config.ts");
+var inversify_config_1 = __nested_webpack_require_457702__(/*! ./di-factory/inversify.config */ "./src/di-factory/inversify.config.ts");
 Object.defineProperty(exports, "configureContainer", ({ enumerable: true, get: function () { return inversify_config_1.configureContainer; } }));
-var PlayerManagerCreator_1 = __nested_webpack_require_457704__(/*! ./di-factory/player-logic/PlayerManagerCreator */ "./src/di-factory/player-logic/PlayerManagerCreator.ts");
+var PlayerManagerCreator_1 = __nested_webpack_require_457702__(/*! ./di-factory/player-logic/PlayerManagerCreator */ "./src/di-factory/player-logic/PlayerManagerCreator.ts");
 Object.defineProperty(exports, "PlayerManagerCreator", ({ enumerable: true, get: function () { return PlayerManagerCreator_1.PlayerManagerCreator; } }));
 
 })();

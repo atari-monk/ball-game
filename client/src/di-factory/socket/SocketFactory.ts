@@ -12,7 +12,7 @@ export abstract class SocketFactory implements IDIFactory<Socket> {
     container
       .bind<ISocketConfigurator>(SocketConfigurator)
       .toDynamicValue(() => {
-        return new SocketConfigurator({ environment: Environment.Development })
+        return new SocketConfigurator({ environment: Environment.Production })
       })
       .inSingletonScope()
 
