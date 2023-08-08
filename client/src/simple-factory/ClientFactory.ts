@@ -41,7 +41,7 @@ export class ClientFactory {
 
   private createSocket() {
     const socketConfigurator = new SocketConfigurator({
-      environment: Environment.Development,
+      environment: Environment.Production,
     })
     const socketManager = new Manager(socketConfigurator.URI)
     const socket = new Socket(socketManager, '/')

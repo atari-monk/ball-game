@@ -19,9 +19,9 @@ export class SocketConfigurator implements ISocketConfigurator {
 
   private getConfig(config?: Partial<SocketConfig>): SocketConfig {
     return {
-      environment: Environment.Development,
+      environment: Environment.Production,
       localUri: 'http://localhost:3001',
-      prodUri: 'https://atari-monk-two-players.azurewebsites.net/',
+      prodUri: 'https://atari-monk-ball-game-server.azurewebsites.net/',
       ...config,
     }
   }
