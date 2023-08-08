@@ -1,7 +1,7 @@
-import { inject, injectable } from 'inversify';
-import { ICreate } from "atari-monk-ball-game-api";
-import { PlayerEventEmitterLogicUnit } from '../../emitter-logic/PlayerEventEmitterLogicUnit';
-import { EventEmitterLogicManager } from '../../lib/emitter-logic/EventEmitterLogicManager';
+import { inject, injectable } from 'inversify'
+import { ICreate } from 'atari-monk-ball-game-api'
+import { PlayerEventEmitterLogicUnit } from '../../emitter-logic/PlayerEventEmitterLogicUnit'
+import { EventEmitterLogicManager } from '../../lib/emitter-logic/EventEmitterLogicManager'
 
 @injectable()
 export class PlayerEmitterCreator implements ICreate<EventEmitterLogicManager> {
@@ -13,7 +13,7 @@ export class PlayerEmitterCreator implements ICreate<EventEmitterLogicManager> {
   ) {}
 
   public create(): EventEmitterLogicManager {
-    this.playerEmitterLogicManager.addLogic(this.playerEmittMovement);
-    return this.playerEmitterLogicManager;
+    this.playerEmitterLogicManager.addLogic(this.playerEmittMovement)
+    return this.playerEmitterLogicManager
   }
 }

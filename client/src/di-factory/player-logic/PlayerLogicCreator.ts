@@ -1,9 +1,9 @@
-import { inject, injectable } from 'inversify';
-import { ICreate } from "atari-monk-ball-game-api";
-import { PlayerConnectLogic } from '../../socket-logic/PlayerConnectLogic';
-import { PlayerList } from '../../socket-logic/PlayerList';
-import { PlayerMovement } from '../../socket-logic/PlayerMovement';
-import { SocketLogicManager } from '../../lib/socket-logic/SocketLogicManager';
+import { inject, injectable } from 'inversify'
+import { ICreate } from 'atari-monk-ball-game-api'
+import { PlayerConnectLogic } from '../../socket-logic/PlayerConnectLogic'
+import { PlayerList } from '../../socket-logic/PlayerList'
+import { PlayerMovement } from '../../socket-logic/PlayerMovement'
+import { SocketLogicManager } from '../../lib/socket-logic/SocketLogicManager'
 
 @injectable()
 export class PlayerLogicCreator implements ICreate<SocketLogicManager> {
@@ -19,9 +19,9 @@ export class PlayerLogicCreator implements ICreate<SocketLogicManager> {
   ) {}
 
   public create(): SocketLogicManager {
-    this.playerLogicManager.addLogic(this.playerConnect);
-    this.playerLogicManager.addLogic(this.playerList);
-    this.playerLogicManager.addLogic(this.playerMovement);
-    return this.playerLogicManager;
+    this.playerLogicManager.addLogic(this.playerConnect)
+    this.playerLogicManager.addLogic(this.playerList)
+    this.playerLogicManager.addLogic(this.playerMovement)
+    return this.playerLogicManager
   }
 }

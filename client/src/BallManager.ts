@@ -1,5 +1,5 @@
-import { BallTypes, IBall, IVector2d } from "atari-monk-ball-game-api";
-import { inject, injectable } from 'inversify';
+import { BallTypes, IBall, IVector2d } from 'atari-monk-ball-game-api'
+import { inject, injectable } from 'inversify'
 
 @injectable()
 export class BallManager {
@@ -9,10 +9,10 @@ export class BallManager {
   ) {}
 
   public updateBallPosition(newPosition: IVector2d) {
-    this.ball.model.position = newPosition;
+    this.ball.model.position = newPosition
   }
 
   public updateBallVelocity(newVelocity: IVector2d) {
-    this.ball.model.velocity = newVelocity;
+    this.ball.model.velocity = newVelocity
   }
 }

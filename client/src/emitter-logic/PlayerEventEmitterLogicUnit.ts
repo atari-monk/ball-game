@@ -1,6 +1,6 @@
-import { Socket } from 'socket.io-client';
-import { EventEmitterLogicUnit } from '../lib/emitter-logic/EventEmitterLogicUnit';
-import { IVectorData } from "atari-monk-ball-game-api";
+import { Socket } from 'socket.io-client'
+import { EventEmitterLogicUnit } from '../lib/emitter-logic/EventEmitterLogicUnit'
+import { IVectorData } from 'atari-monk-ball-game-api'
 
 export class PlayerEventEmitterLogicUnit extends EventEmitterLogicUnit {
   constructor(
@@ -8,7 +8,7 @@ export class PlayerEventEmitterLogicUnit extends EventEmitterLogicUnit {
     private readonly socketEventName: string,
     private readonly socket: Socket
   ) {
-    super(eventName);
+    super(eventName)
   }
 
   protected logicUnit(data: IVectorData) {
@@ -18,7 +18,7 @@ export class PlayerEventEmitterLogicUnit extends EventEmitterLogicUnit {
         x: data.newVector.x,
         y: data.newVector.y,
       },
-    };
-    this.socket.emit(this.socketEventName, jsObj);
+    }
+    this.socket.emit(this.socketEventName, jsObj)
   }
 }

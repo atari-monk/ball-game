@@ -1,9 +1,9 @@
-import { Container, injectable } from 'inversify';
-import { ConnectErrorHandler } from '../../socket-logic/ConnectErrorHandler';
-import { DisconnectHandler } from '../../socket-logic/DisconnectHandler';
-import { SocketLogicCreator } from './SocketLogicCreator';
-import { IDIFactory } from '../IDIFactory';
-import { SocketLogicManager } from '../../lib/socket-logic/SocketLogicManager';
+import { Container, injectable } from 'inversify'
+import { ConnectErrorHandler } from '../../socket-logic/ConnectErrorHandler'
+import { DisconnectHandler } from '../../socket-logic/DisconnectHandler'
+import { SocketLogicCreator } from './SocketLogicCreator'
+import { IDIFactory } from '../IDIFactory'
+import { SocketLogicManager } from '../../lib/socket-logic/SocketLogicManager'
 
 @injectable()
 export class SocketLogicFactory implements IDIFactory<SocketLogicManager> {
@@ -11,24 +11,24 @@ export class SocketLogicFactory implements IDIFactory<SocketLogicManager> {
     container
       .bind<ConnectErrorHandler>(ConnectErrorHandler)
       .toDynamicValue(() => {
-        return new ConnectErrorHandler('connect_error');
+        return new ConnectErrorHandler('connect_error')
       })
-      .inSingletonScope();
+      .inSingletonScope()
 
     container
       .bind<DisconnectHandler>(DisconnectHandler)
       .toDynamicValue(() => {
-        return new DisconnectHandler('disconnect');
+        return new DisconnectHandler('disconnect')
       })
-      .inSingletonScope();
+      .inSingletonScope()
 
     container
       .bind<SocketLogicManager>(SocketLogicManager)
       .toSelf()
-      .inRequestScope();
+      .inRequestScope()
   }
 
   public create(container: Container): SocketLogicManager {
-    return container.resolve(SocketLogicCreator).create();
+    return container.resolve(SocketLogicCreator).create()
   }
 }

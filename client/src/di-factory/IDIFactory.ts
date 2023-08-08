@@ -1,4 +1,4 @@
-import { Container } from 'inversify';
+import { Container } from 'inversify'
 
 export interface IDIFactory<T> {
   register(container: Container): void;

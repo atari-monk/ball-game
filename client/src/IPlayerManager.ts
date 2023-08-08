@@ -1,5 +1,5 @@
-import { Socket } from 'socket.io-client';
-import { IPlayer, IVector2d, IPlayerNpc } from 'atari-monk-ball-game-api';
+import { Socket } from 'socket.io-client'
+import { IPlayer, IVector2d, IPlayerNpc } from 'atari-monk-ball-game-api'
 
 export interface IPlayerManager {
   addPlayer(clientId: string, player: IPlayer): void;
