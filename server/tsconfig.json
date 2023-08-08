@@ -1,17 +1,18 @@
 {
-  "compilerOptions": {
-    "target": "es6",
-    "types": ["reflect-metadata"],
-    "module": "commonjs",
-    "outDir": "build",
-    "declaration": true,
-    "strict": true,
-    "allowJs": false,
-    "esModuleInterop": true,
-    "skipLibCheck": true,
-    "experimentalDecorators": true,
-    "emitDecoratorMetadata": true
-  },
-  "include": ["./src/**/*.ts"],
-  "exclude": ["node_modules"]
+    "compilerOptions": {
+        "target": "es6",
+        "types": ["reflect-metadata"],
+        "module": "CommonJS",
+        "outDir": "./build",
+        "declaration": true,
+        "strict": true,
+        "allowJs": false,
+        "esModuleInterop": true,
+        "skipLibCheck": true,
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "include": ["./src/**/*.ts"],
+    "exclude": ["node_modules"]
 }
