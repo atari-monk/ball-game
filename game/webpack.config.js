@@ -3,30 +3,30 @@ const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const CopyPlugin = require('copy-webpack-plugin');
 
 module.exports = {
-  entry: './src/index.ts',
-  mode: 'development',
-  devtool: 'source-map',
-  module: {
-    rules: [
-      {
-        test: /\.ts$/,
-        use: 'ts-loader',
-        exclude: /node_modules/,
-      },
+    entry: "./src/index.ts",
+    mode: "development",
+    devtool: "source-map",
+    module: {
+        rules: [
+            {
+                test: /\.ts$/,
+                use: "ts-loader",
+                exclude: /node_modules/,
+            },
+        ],
+    },
+    resolve: {
+        extensions: [".ts", ".js"],
+    },
+    output: {
+        path: path.resolve(__dirname, "build"),
+        filename: "atari-monk-ball-game.js",
+    },
+    plugins: [
+        new CleanWebpackPlugin(),
+        new CopyPlugin({
+            patterns: [{ from: "./package.json", to: "./" }],
+        }),
     ],
-  },
-  resolve: {
-    extensions: ['.ts', '.js'],
-  },
-  output: {
-    path: path.resolve(__dirname, 'build'),
-    filename: 'atari-monk-game-ball.js',
-  },
-  plugins: [
-    new CleanWebpackPlugin(),
-    new CopyPlugin({
-      patterns: [{ from: './package.json', to: './' }],
-    }),
-  ],
-  stats: { errorDetails: false },
+    stats: { errorDetails: false },
 };
