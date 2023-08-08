@@ -1,4 +1,0 @@
-{
-    "appService.defaultWebAppToDeploy": "/subscriptions/2457e426-2096-4da7-b52a-7e0563ab0db3/resourceGroups/atari-monk-ball-game-server/providers/Microsoft.Web/sites/atari-monk-ball-game-server",
-    "appService.deploySubpath": "server"
-}
