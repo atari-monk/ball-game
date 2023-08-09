@@ -21,7 +21,11 @@ export class GameServer {
   }
 
   private configureMiddleware() {
-    this.app.use(cors())
+    this.app.use(
+      cors({
+        origin: 'https://kind-moss-0f787ca03.3.azurestaticapps.net',
+      })
+    )
   }
 
   private listen() {
