@@ -13,13 +13,13 @@ export class SocketConfigurator implements ISocketConfigurator {
   }
 
   constructor(config?: Partial<SocketConfig>) {
-    this.config = this.getConfig(config)
+    this.config = this.getServerConfig(config)
     this._uri = this.getUri()
   }
 
-  private getConfig(config?: Partial<SocketConfig>): SocketConfig {
+  private getServerConfig(config?: Partial<SocketConfig>): SocketConfig {
     return {
-      environment: Environment.Production,
+      environment: Environment.Development,
       localUri: 'http://localhost:3001',
       prodUri: 'https://atari-monk-ball-game-server.azurewebsites.net',
       ...config,
