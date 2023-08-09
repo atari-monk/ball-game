@@ -21,15 +21,7 @@ export class GameServer {
   }
 
   private configureMiddleware() {
-    this.app.use((req, res, next) => {
-      res.setHeader(
-        'Access-Control-Allow-Origin',
-        'https://kind-moss-0f787ca03.3.azurestaticapps.net/'
-      )
-      res.setHeader('Access-Control-Allow-Methods', 'GET, POST, PUT, DELETE')
-      res.setHeader('Access-Control-Allow-Headers', 'Content-Type')
-      next()
-    })
+    this.app.use(cors())
   }
 
   private listen() {
