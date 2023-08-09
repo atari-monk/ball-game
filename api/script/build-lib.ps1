@@ -34,4 +34,4 @@ Remove-Item ($lib + $pack)
 Remove-Item ($client + $pack)
 #needed for deploy
 #Remove-Item ($server + $pack)
-Remove-Item ($game + $pack)
+#Remove-Item ($game + $pack)

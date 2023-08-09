@@ -14,5 +14,5 @@ Copy-Item $lib $game
 Set-Location $game
 npm i (Get-Item $pack).Name
 #clean files
-#Remove-Item $lib
+Remove-Item $lib
 #Remove-Item ($game + $pack)
