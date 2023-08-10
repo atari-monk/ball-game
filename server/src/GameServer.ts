@@ -29,8 +29,12 @@ export class GameServer {
   }
 
   private listen() {
-    this.server.listen(this.PORT, () => {
-      console.log(`Server is running on port ${this.PORT}`)
-    })
+    try {
+      this.server.listen(this.PORT, () => {
+        console.log(`Server is running on port ${this.PORT}`)
+      })
+    } catch (error) {
+      console.error('Error while starting the server:', error)
+    }
   }
 }

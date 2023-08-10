@@ -15,6 +15,7 @@ export class SocketConfigurator implements ISocketConfigurator {
   constructor(config?: Partial<SocketConfig>) {
     this.config = this.getServerConfig(config)
     this._uri = this.getUri()
+    console.log('uri:', this._uri)
   }
 
   private getServerConfig(config?: Partial<SocketConfig>): SocketConfig {

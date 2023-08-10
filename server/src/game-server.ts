@@ -6,6 +6,7 @@ import { ServerDIFactory } from './di-factory/ServerDIFactory'
 
 const factory: ICreate<GameServer> = new ServerSimpleFactory()
 const gameServer: GameServer = factory.create()
+console.log('Starting...')
 gameServer.start()
 
 // const factory: IDIFactory<GameServer> = new ServerDIFactory();
