@@ -1,11 +1,14 @@
 import { AppFactory } from './AppFactory'
 import { PlayersFactory } from './PlayersFactory'
 import { BallFactory } from './BallFactory'
-import { ClientFactory, Environment } from 'atari-monk-ball-game-client'
+import {
+  ClientFactory,
+  ISocketConfig,
+} from 'atari-monk-ball-game-client'
 import { FieldFactory } from './FieldFactory'
 
 export class BallGameSimpleFactory {
-  constructor() {
+  constructor(private readonly config: Partial<ISocketConfig>) {
     const appFactory = new AppFactory()
     const playersFactory = new PlayersFactory()
     const emitter = playersFactory.emitter
@@ -19,9 +22,7 @@ export class BallGameSimpleFactory {
     gameObjsManager.addGameObject(ballFactory.ball)
 
     new ClientFactory(
-      {
-        environment: Environment.Development,
-      },
+      config,
       emitter,
       playersFactory.player1,
       playersFactory.player2,

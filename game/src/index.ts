@@ -1,18 +1,21 @@
-import 'reflect-metadata';
-import * as configUtils from './config/configUtils';
-import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory';
-import { BallGameDIFactory } from './di-factory/BallGameDIFactory';
+import 'reflect-metadata'
+import * as configUtils from './config/configUtils'
+import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory'
+import { BallGameDIFactory } from './di-factory/BallGameDIFactory'
+import { Environment } from 'atari-monk-ball-game-client'
 
 async function initializeConfig(): Promise<void> {
-  const config = await configUtils.fetchConfig();
+  const config = await configUtils.fetchConfig()
 
   if (config.factoryVersion === 'simple-factory') {
-    new BallGameSimpleFactory();
+    new BallGameSimpleFactory({
+      environment: Environment.Development,
+    })
   } else if (config.factoryVersion === 'di-factory') {
-    new BallGameDIFactory();
+    new BallGameDIFactory()
   } else {
-    console.error('Invalid factory version specified in the config.');
+    console.error('Invalid factory version specified in the config.')
   }
 }
 
-initializeConfig();
+initializeConfig()
