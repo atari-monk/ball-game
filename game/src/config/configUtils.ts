@@ -1,8 +1,8 @@
 import { IAppConfig } from './IAppConfig';
 
 const defaultConfig: IAppConfig = {
-  factoryVersion: 'v1',
-};
+  factoryVersion: 'simple-factory',
+}
 
 export async function fetchConfig(): Promise<IAppConfig> {
   try {
