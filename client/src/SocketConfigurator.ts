@@ -1,24 +1,24 @@
 import { Environment } from './Environment'
-import { SocketConfig } from './SocketConfig'
+import { ISocketConfig } from './ISocketConfig'
 import { ISocketConfigurator } from './ISocketConfigurator'
 import { injectable } from 'inversify'
 
 @injectable()
 export class SocketConfigurator implements ISocketConfigurator {
-  private config: SocketConfig
+  private config: ISocketConfig
   private _uri: string
 
   public get URI() {
     return this._uri
   }
 
-  constructor(config?: Partial<SocketConfig>) {
+  constructor(config: Partial<ISocketConfig>) {
     this.config = this.getServerConfig(config)
     this._uri = this.getUri()
-    console.log('uri:', this._uri)
+    console.log('client uri set to:', this._uri)
   }
 
-  private getServerConfig(config?: Partial<SocketConfig>): SocketConfig {
+  private getServerConfig(config: Partial<ISocketConfig>): ISocketConfig {
     return {
       environment: Environment.Development,
       localUri: 'http://localhost:3001',

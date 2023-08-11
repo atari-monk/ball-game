@@ -2,7 +2,6 @@ import { Manager, Socket } from 'socket.io-client'
 import { IBall, IPlayer, IPlayerNpc } from 'atari-monk-ball-game-api'
 import EventEmitter from 'eventemitter3'
 import { SocketConfigurator } from '../SocketConfigurator'
-import { Environment } from '../Environment'
 import { SocketErrorHandler } from '../SocketErrorHandler'
 import { ConnectErrorHandler } from '../socket-logic/ConnectErrorHandler'
 import { DisconnectHandler } from '../socket-logic/DisconnectHandler'
@@ -17,11 +16,13 @@ import { BallVelocity } from '../socket-logic/BallVelocity'
 import { BallEventEmitterLogicUnit } from '../emitter-logic/BallEventEmitterLogicUnit'
 import { SocketLogicManager } from '../lib/socket-logic/SocketLogicManager'
 import { EventEmitterLogicManager } from '../lib/emitter-logic/EventEmitterLogicManager'
+import { ISocketConfig } from '../ISocketConfig'
 
 export class ClientFactory {
   private socket: Socket
 
   constructor(
+    private readonly config: Partial<ISocketConfig>,
     private readonly eventEmitter: EventEmitter,
     player: IPlayer,
     playerNpc: IPlayerNpc,
@@ -40,9 +41,7 @@ export class ClientFactory {
   }
 
   private createSocket() {
-    const socketConfigurator = new SocketConfigurator({
-      environment: Environment.Production,
-    })
+    const socketConfigurator = new SocketConfigurator(this.config)
     const socketManager = new Manager(socketConfigurator.URI)
     const socket = new Socket(socketManager, '/')
     new SocketErrorHandler(socket)
