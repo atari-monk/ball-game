@@ -1,3 +1,4 @@
 {
-  "factoryVersion": "simple-factory"
+  "environment": "development",
+  "factoryVersion": "simpleFactory"
 }

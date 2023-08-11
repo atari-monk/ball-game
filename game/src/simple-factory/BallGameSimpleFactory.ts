@@ -8,7 +8,7 @@ import {
 import { FieldFactory } from './FieldFactory'
 
 export class BallGameSimpleFactory {
-  constructor(private readonly config: Partial<ISocketConfig>) {
+  constructor(config: Partial<ISocketConfig>) {
     const appFactory = new AppFactory()
     const playersFactory = new PlayersFactory()
     const emitter = playersFactory.emitter

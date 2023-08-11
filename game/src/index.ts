@@ -2,16 +2,17 @@ import 'reflect-metadata'
 import * as configUtils from './config/configUtils'
 import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory'
 import { BallGameDIFactory } from './di-factory/BallGameDIFactory'
-import { Environment } from 'atari-monk-ball-game-client'
+import { FactoryVersion } from './config/IAppConfig'
 
 async function initializeConfig(): Promise<void> {
   const config = await configUtils.fetchConfig()
-
-  if (config.factoryVersion === 'simple-factory') {
+  const environment = config.environment
+  const factory = config.factoryVersion
+  if (factory === FactoryVersion.SimpleFactory) {
     new BallGameSimpleFactory({
-      environment: Environment.Development,
+      environment,
     })
-  } else if (config.factoryVersion === 'di-factory') {
+  } else if (factory === FactoryVersion.DIFactory) {
     new BallGameDIFactory()
   } else {
     console.error('Invalid factory version specified in the config.')
