@@ -3,7 +3,7 @@
     "version": "0.0.1",
     "main": "atari-monk-ball-game-lib.js",
     "types": "index.d.ts",
-    "description": "ts game library based on pixi, socket-io...",
+    "description": "Typescript game helper library based on pixi.",
     "scripts": {
         "build": "npx webpack --config webpack.config.js",
         "build-ts": "tsc",
@@ -18,7 +18,7 @@
     "author": "atari-monk",
     "license": "ISC",
     "dependencies": {
-        "atari-monk-ball-game-api": "file:atari-monk-ball-game-api-0.0.1.tgz",
+        "atari-monk-ball-game-api": "^0.0.1",
         "eventemitter3": "^5.0.1",
         "inversify": "^6.0.1",
         "pixi.js": "^7.2.4",
