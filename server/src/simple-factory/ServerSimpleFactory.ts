@@ -19,6 +19,7 @@ export class ServerSimpleFactory implements ICreate<GameServer> {
   }
 
   createServers() {
+    console.log('create servers');
     const app = express();
     const serverHttp = http.createServer(app);
     const optionsSIO = {

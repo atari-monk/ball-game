@@ -4,9 +4,11 @@ import { ICreate, IDIFactory } from 'atari-monk-ball-game-api'
 import { ServerSimpleFactory } from './simple-factory/ServerSimpleFactory'
 import { ServerDIFactory } from './di-factory/ServerDIFactory'
 
+console.log('create server factory:');
 const factory: ICreate<GameServer> = new ServerSimpleFactory()
+console.log('run factory:')
 const gameServer: GameServer = factory.create()
-console.log('Starting...')
+console.log('starting game server')
 gameServer.start()
 
 // const factory: IDIFactory<GameServer> = new ServerDIFactory();
