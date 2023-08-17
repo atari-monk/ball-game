@@ -1,0 +1,50 @@
+.diode-widget {
+  text-align: center;
+}
+
+.label {
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.diode {
+  position: relative;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: gray;
+  display: inline-block;
+  transition: background-color 0.3s;
+}
+
+.diode::before {
+  content: '';
+  position: absolute;
+  background-color: red;
+  transition: background-color 0.3s;
+}
+
+.diode.on {
+  background-color: green;
+}
+
+/* Portrait orientation */
+@media (orientation: portrait) {
+  .diode::before {
+    width: 2px;
+    height: 100%;
+    top: 0;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+}
+
+/* Landscape orientation */
+@media (orientation: landscape) {
+  .diode::before {
+    width: 100%;
+    height: 2px;
+    top: 50%;
+    left: 0;
+  }
+}
