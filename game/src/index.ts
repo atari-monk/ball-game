@@ -4,8 +4,19 @@ import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory'
 import { BallGameDIFactory } from './di-factory/BallGameDIFactory'
 import { FactoryVersion } from './config/IAppConfig'
 import { IMobileDetectionService } from 'atari-monk-ball-game-api'
+import { MobileDetectionService } from 'atari-monk-ball-game-lib'
 
-//const isMobile: IMobileDetectionService = new MobileDetectionService(); 
+const isMobile: IMobileDetectionService = new MobileDetectionService()
+
+const diodeElement = document.getElementById('diode')
+
+const isDiodeOn = isMobile
+
+if (isDiodeOn) {
+  diodeElement?.classList.add('on')
+} else {
+  diodeElement?.classList.remove('on')
+}
 
 async function initializeConfig(): Promise<void> {
   const config = await configUtils.fetchConfig()
