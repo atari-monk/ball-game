@@ -3,6 +3,9 @@ import * as configUtils from './config/configUtils'
 import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory'
 import { BallGameDIFactory } from './di-factory/BallGameDIFactory'
 import { FactoryVersion } from './config/IAppConfig'
+import { IMobileDetectionService } from 'atari-monk-ball-game-api'
+
+//const isMobile: IMobileDetectionService = new MobileDetectionService(); 
 
 async function initializeConfig(): Promise<void> {
   const config = await configUtils.fetchConfig()
