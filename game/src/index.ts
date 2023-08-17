@@ -10,7 +10,7 @@ const isMobile: IMobileDetectionService = new MobileDetectionService()
 
 const diodeElement = document.getElementById('diode')
 
-const isDiodeOn = isMobile
+const isDiodeOn = isMobile.isMobileDevice()
 
 if (isDiodeOn) {
   diodeElement?.classList.add('on')
