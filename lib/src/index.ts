@@ -7,8 +7,6 @@ export { Ball } from './ball/Ball'
 export { BallFactory } from './ball/BallFactory'
 export { BallModel } from './ball/BallModel'
 export { BallRenderer } from './ball/BallRenderer'
-//ball-game
-export { BallGame } from './ball-game/BallGame'
 //data
 export {
   getPixiAppParams,
@@ -28,6 +26,9 @@ export { Field } from './field/Field'
 export { FieldFactory } from './field/FieldFactory'
 export { FieldModel } from './field/FieldModel'
 export { FieldRenderer } from './field/FieldRenderer'
+//game
+export { BallGame } from './game/BallGame'
+export { SpriteDemo } from './game/SpriteDemo'
 //game-obj
 export { GameObject } from './game-obj/GameObject'
 export { GameObjectManager } from './game-obj/GameObjectManager'

@@ -5,8 +5,6 @@ export { IAppHelperParams } from './app/IAppHelperParams'
 export { IBall } from './ball/IBall'
 export { IBallModel } from './ball/IBallModel'
 export { IBallRenderer } from './ball/IBallRenderer'
-//ball-game
-export { IBallGame } from './ball-game/IBallGame'
 //data-structure
 export { IVector2d } from './data-structure/IVector2d'
 //di-container
@@ -28,6 +26,9 @@ export { IFieldModel } from './field/IFieldModel'
 export { IFieldParams } from './field/IFieldParams'
 export { IFieldRenderer } from './field/IFieldRenderer'
 export { IField } from './field/IField'
+//game
+export { IGameLoop } from './game/IGameLoop'
+export { IBallGame } from './game/IBallGame'
 //game-obj
 export { IDrawable } from './game-obj/IDrawable'
 export { IGameObject } from './game-obj/IGameObject'

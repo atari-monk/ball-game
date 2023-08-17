@@ -1,16 +1,16 @@
-import { Container } from 'inversify';
+import { Container } from 'inversify'
 import {
-    IAppHelper,
-    IGameObjectManager,
-    IGameUpdateable,
-    IBallGame,
-    IRegister,
-} from "atari-monk-ball-game-api";
-import { appHelperParams } from '../data/ballGameParams';
-import { AppHelper } from './AppHelper';
-import { GameObjectManager } from '../game-obj/GameObjectManager';
-import { Collider } from '../game-updateable/Collider';
-import { BallGame } from '../ball-game/BallGame';
+  IAppHelper,
+  IGameObjectManager,
+  IGameUpdateable,
+  IBallGame,
+  IRegister,
+} from 'atari-monk-ball-game-api'
+import { appHelperParams } from '../data/ballGameParams'
+import { AppHelper } from './AppHelper'
+import { GameObjectManager } from '../game-obj/GameObjectManager'
+import { Collider } from '../game-updateable/Collider'
+import { BallGame } from '../game/BallGame'
 
 export abstract class AppFactoryBase implements IRegister {
   constructor(protected readonly container: Container) {}
@@ -19,24 +19,24 @@ export abstract class AppFactoryBase implements IRegister {
     this.container
       .bind<IAppHelper>(AppHelper)
       .toDynamicValue(() => {
-        return new AppHelper(appHelperParams);
+        return new AppHelper(appHelperParams)
       })
-      .inSingletonScope();
+      .inSingletonScope()
 
-    this.registerPixiApp();
+    this.registerPixiApp()
 
     this.container
       .bind<IGameObjectManager>(GameObjectManager)
       .to(GameObjectManager)
-      .inSingletonScope();
+      .inSingletonScope()
 
     this.container
       .bind<IGameUpdateable>(Collider)
       .to(Collider)
-      .inSingletonScope();
+      .inSingletonScope()
 
-    this.container.bind<IBallGame>(BallGame).to(BallGame).inSingletonScope();
+    this.container.bind<IBallGame>(BallGame).to(BallGame).inSingletonScope()
   }
 
-  abstract registerPixiApp(): void;
+  abstract registerPixiApp(): void
 }
