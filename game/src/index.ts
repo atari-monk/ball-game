@@ -14,8 +14,15 @@ const isDiodeOn = isMobile.isMobileDevice()
 
 if (isDiodeOn) {
   diodeElement?.classList.add('on')
+  if (isMobile.isPortrait()) {
+    diodeElement?.classList.add('portrait')
+  } else if (isMobile.isLandscape()) {
+    diodeElement?.classList.add('landscape')
+  }
 } else {
   diodeElement?.classList.remove('on')
+  diodeElement?.classList.remove('portrait')
+  diodeElement?.classList.remove('landscape')
 }
 
 async function initializeConfig(): Promise<void> {

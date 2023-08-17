@@ -28,7 +28,6 @@
   background-color: green;
 }
 
-/* Portrait orientation */
 @media (orientation: portrait) {
   .diode::before {
     width: 2px;
@@ -39,7 +38,6 @@
   }
 }
 
-/* Landscape orientation */
 @media (orientation: landscape) {
   .diode::before {
     width: 100%;
@@ -47,4 +45,12 @@
     top: 50%;
     left: 0;
   }
+}
+
+.diode.on.portrait {
+  background-color: blue;
+}
+
+.diode.on.landscape {
+  background-color: purple;
 }
