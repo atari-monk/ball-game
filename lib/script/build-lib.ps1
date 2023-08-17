@@ -6,7 +6,8 @@ Set-Location build
 npm pack
 #paths
 $proj = "C:\atari-monk\Code\ball-game\"
-$pack = "atari-monk-ball-game-lib-0.0.1.tgz"
+$version = "0.0.2"
+$pack = "atari-monk-ball-game-lib-" + $version + ".tgz"
 $lib = $proj + "lib\build\" + $pack
 #install in game
 $game = $proj + "game\"
