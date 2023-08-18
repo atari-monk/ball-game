@@ -1,19 +1,22 @@
 import { AppFactory } from './AppFactory'
 import { PlayersFactory } from './PlayersFactory'
 import { BallFactory } from './BallFactory'
-import {
-  ClientFactory,
-  ISocketConfig,
-} from 'atari-monk-ball-game-client'
+import { ClientFactory, ISocketConfig } from 'atari-monk-ball-game-client'
 import { FieldFactory } from './FieldFactory'
+import { IFieldParams } from 'atari-monk-ball-game-api'
+import { IMobileFlags } from '../../../api/src/mobile/IMobileFlags'
 
 export class BallGameSimpleFactory {
-  constructor(config: Partial<ISocketConfig>) {
-    const appFactory = new AppFactory()
+  constructor(
+    clientConfig: Partial<ISocketConfig>,
+    fieldConfig: IFieldParams,
+    mobileState: IMobileFlags
+  ) {
+    const appFactory = new AppFactory(mobileState)
     const playersFactory = new PlayersFactory()
     const emitter = playersFactory.emitter
     const ballFactory = new BallFactory(emitter)
-    const fieldFactory = new FieldFactory()
+    const fieldFactory = new FieldFactory(fieldConfig)
 
     const gameObjsManager = appFactory.gameObjsManager
     gameObjsManager.addGameObject(fieldFactory.field)
@@ -22,7 +25,7 @@ export class BallGameSimpleFactory {
     gameObjsManager.addGameObject(ballFactory.ball)
 
     new ClientFactory(
-      config,
+      clientConfig,
       emitter,
       playersFactory.player1,
       playersFactory.player2,

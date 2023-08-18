@@ -1,28 +1,27 @@
-import { IField } from "atari-monk-ball-game-api";
+import { IField, IFieldParams } from 'atari-monk-ball-game-api'
 import {
-    Field,
-    FieldModel,
-    FieldRenderer,
-    BasicRenderer,
-    fieldParams,
-} from "atari-monk-ball-game-lib";
+  Field,
+  FieldModel,
+  FieldRenderer,
+  BasicRenderer,
+} from 'atari-monk-ball-game-lib'
 
 export class FieldFactory {
-  private _field: IField;
+  private _field: IField
 
   public get field() {
-    return this._field;
+    return this._field
   }
 
-  constructor() {
+  constructor(data: IFieldParams) {
     try {
       this._field = new Field(
-        new FieldModel(fieldParams),
+        new FieldModel(data),
         new FieldRenderer(new BasicRenderer())
-      );
+      )
     } catch (error) {
-      console.error('Error creating field:', error);
-      throw error;
+      console.error('Error creating field:', error)
+      throw error
     }
   }
 }

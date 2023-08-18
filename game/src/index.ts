@@ -3,8 +3,15 @@ import * as configUtils from './config/configUtils'
 import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory'
 import { BallGameDIFactory } from './di-factory/BallGameDIFactory'
 import { FactoryVersion } from './config/IAppConfig'
-import { MobileDetectionService } from 'atari-monk-ball-game-lib'
+import {
+  MobileDetectionService,
+  fieldParams,
+  mobileState,
+} from 'atari-monk-ball-game-lib'
+import { IFieldParams } from 'atari-monk-ball-game-api'
+import { mobilePortrait } from './data/mobilePortrait'
 
+let fieldConfig: IFieldParams
 const mobileService = new MobileDetectionService()
 const diodeElement = document.getElementById('diode')
 
@@ -19,29 +26,35 @@ function debounce(callback: () => void, delay: number): void {
 }
 
 function handleOrientationChange() {
-  if (!mobileService.isMobileDevice()) {
+  mobileState.setFlags(
+    mobileService.isMobileDevice(),
+    mobileService.isPortrait(),
+    mobileService.isLandscape()
+  )
+  if (!mobileState.mobile) {
     diodeElement?.classList.remove('on')
     diodeElement?.classList.remove('landscape')
     diodeElement?.classList.remove('portrait')
-    console.log('not mobile')
+    fieldConfig = fieldParams
     return
   }
   diodeElement?.classList.add('on')
-  console.log('mobile')
-  if (mobileService.isPortrait()) {
+  if (mobileState.portrait) {
     diodeElement?.classList.add('portrait')
     diodeElement?.classList.remove('landscape')
-    console.log('portrait')
-  } else if (mobileService.isLandscape()) {
+    fieldConfig = mobilePortrait.fieldParams
+  } else if (mobileState.landscape) {
     diodeElement?.classList.add('landscape')
     diodeElement?.classList.remove('portrait')
-    console.log('landscape')
   }
 }
 
 function handleOrientationChangeWithDebounce() {
   debounce(() => {
     handleOrientationChange()
+    initializeConfig()
+    console.log('Screen width: ' + window.innerWidth + ' pixels')
+    console.log('Screen height: ' + window.innerHeight + ' pixels')
   }, 300)
 }
 
@@ -56,14 +69,16 @@ async function initializeConfig(): Promise<void> {
   const environment = config.environment
   const factory = config.factoryVersion
   if (factory === FactoryVersion.SimpleFactory) {
-    new BallGameSimpleFactory({
-      environment,
-    })
+    new BallGameSimpleFactory(
+      {
+        environment,
+      },
+      fieldConfig,
+      mobileState
+    )
   } else if (factory === FactoryVersion.DIFactory) {
     new BallGameDIFactory()
   } else {
     console.error('Invalid factory version specified in the config.')
   }
 }
-
-initializeConfig()
