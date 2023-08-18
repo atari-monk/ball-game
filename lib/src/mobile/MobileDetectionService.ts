@@ -15,4 +15,12 @@ export class MobileDetectionService implements IMobileDetectionService {
   isLandscape(): boolean {
     return window.matchMedia('(orientation: landscape)').matches
   }
+
+  addOrientationChangeListeners(callback: () => void): void {
+    window.addEventListener('orientationchange', callback)
+  }
+
+  removeOrientationChangeListeners(callback: () => void): void {
+    window.removeEventListener('orientationchange', callback)
+  }
 }

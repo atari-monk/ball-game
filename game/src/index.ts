@@ -3,27 +3,53 @@ import * as configUtils from './config/configUtils'
 import { BallGameSimpleFactory } from './simple-factory/BallGameSimpleFactory'
 import { BallGameDIFactory } from './di-factory/BallGameDIFactory'
 import { FactoryVersion } from './config/IAppConfig'
-import { IMobileDetectionService } from 'atari-monk-ball-game-api'
 import { MobileDetectionService } from 'atari-monk-ball-game-lib'
 
-const isMobile: IMobileDetectionService = new MobileDetectionService()
-
+const mobileService = new MobileDetectionService()
 const diodeElement = document.getElementById('diode')
 
-const isDiodeOn = isMobile.isMobileDevice()
+function debounce(callback: () => void, delay: number): void {
+  let debounceTimer: NodeJS.Timeout | null = null
 
-if (isDiodeOn) {
-  diodeElement?.classList.add('on')
-  if (isMobile.isPortrait()) {
-    diodeElement?.classList.add('portrait')
-  } else if (isMobile.isLandscape()) {
-    diodeElement?.classList.add('landscape')
+  if (debounceTimer) {
+    clearTimeout(debounceTimer)
   }
-} else {
-  diodeElement?.classList.remove('on')
-  diodeElement?.classList.remove('portrait')
-  diodeElement?.classList.remove('landscape')
+
+  debounceTimer = setTimeout(callback, delay)
 }
+
+function handleOrientationChange() {
+  if (!mobileService.isMobileDevice()) {
+    diodeElement?.classList.remove('on')
+    diodeElement?.classList.remove('landscape')
+    diodeElement?.classList.remove('portrait')
+    console.log('not mobile')
+    return
+  }
+  diodeElement?.classList.add('on')
+  console.log('mobile')
+  if (mobileService.isPortrait()) {
+    diodeElement?.classList.add('portrait')
+    diodeElement?.classList.remove('landscape')
+    console.log('portrait')
+  } else if (mobileService.isLandscape()) {
+    diodeElement?.classList.add('landscape')
+    diodeElement?.classList.remove('portrait')
+    console.log('landscape')
+  }
+}
+
+function handleOrientationChangeWithDebounce() {
+  debounce(() => {
+    handleOrientationChange()
+  }, 300)
+}
+
+handleOrientationChangeWithDebounce()
+mobileService.addOrientationChangeListeners(handleOrientationChangeWithDebounce)
+window.addEventListener('beforeunload', () => {
+  mobileService.removeOrientationChangeListeners(handleOrientationChange)
+})
 
 async function initializeConfig(): Promise<void> {
   const config = await configUtils.fetchConfig()
