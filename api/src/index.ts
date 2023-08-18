@@ -51,6 +51,7 @@ export { ISocketLogicUnit } from './logic/ISocketLogicUnit'
 export { ISrvSctLogicUnit } from './logic/ISrvSctLogicUnit'
 //mobile
 export { IMobileDetectionService } from './mobile/IMobileDetectionService'
+export { IMobileFlags } from './mobile/IMobileFlags'
 //model
 export { ICircle } from './model/ICircle'
 export { IClientId } from './model/IClientId'
