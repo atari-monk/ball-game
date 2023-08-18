@@ -3,6 +3,7 @@ import {
   IAppHelper,
   IAppHelperParams,
   IGameLoop,
+  IMobileFlags,
 } from 'atari-monk-ball-game-api'
 import { getCanvas } from '../utils/ui'
 
@@ -51,7 +52,10 @@ export class AppHelper implements IAppHelper {
     this._height = value
   }
 
-  constructor(options: IAppHelperParams) {
+  constructor(
+    options: IAppHelperParams,
+    private readonly mobileState: IMobileFlags
+  ) {
     const { screenSize, backgroundColor, fullScreen } = options
     this._width = screenSize.width
     this._height = screenSize.height
@@ -85,20 +89,36 @@ export class AppHelper implements IAppHelper {
 
   private setCanvasStyles() {
     if (!this._canvas) return
-    this._canvas.style.position = 'absolute'
-    this._canvas.style.top = '50%'
-    this._canvas.style.left = '50%'
-    this._canvas.style.transform = 'translate(-50%, -50%)'
-    const full = '100%'
-    this._canvas.style.width = this._fullScreen ? full : `${this._width}`
-    this._canvas.style.height = this._fullScreen ? full : `${this._height}`
-    this._canvas.style.border = this._fullScreen ? 'none' : '1px solid white'
-  }
 
-  public startAnimationLoop(game: IGameLoop) {
-    this.pixiApp.ticker.add((deltaTime) => {
-      game.gameLoop(deltaTime)
-    })
+    const isFullScreen = this._fullScreen
+    const full = '100%'
+    const canvasWidth = isFullScreen ? full : `${this._width}px`
+    const canvasHeight = isFullScreen ? full : `${this._height}px`
+    const canvasBorder = isFullScreen ? 'none' : '1px solid red'
+    let style = {
+      position: 'absolute',
+      top: '50%',
+      left: '50%',
+      transform: 'translate(-50%, -50%)',
+      width: canvasWidth,
+      height: canvasHeight,
+      border: canvasBorder,
+      marginBottom: '0',
+    }
+
+    if (this.mobileState.mobile && this.mobileState.portrait) {
+      style.width = '300px'
+      style.height = '400px'
+    } else if (this.mobileState.mobile && this.mobileState.landscape) {
+      style.width = '400px'
+      style.height = '300px'
+      style.top = '45%'
+    } else {
+      style.width = canvasWidth
+      style.height = canvasHeight
+    }
+    console.log('style:', style)
+    Object.assign(this._canvas.style, style)
   }
 
   private resizeCanvas() {
@@ -108,6 +128,12 @@ export class AppHelper implements IAppHelper {
         this._height = window.innerHeight
       }
       this.pixiApp.renderer.resize(this._width, this._height)
+    })
+  }
+
+  public startAnimationLoop(game: IGameLoop) {
+    this.pixiApp.ticker.add((deltaTime) => {
+      game.gameLoop(deltaTime)
     })
   }
 }

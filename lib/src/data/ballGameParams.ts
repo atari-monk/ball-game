@@ -1,21 +1,23 @@
-import * as PIXI from 'pixi.js';
-import { Vector2d } from '../model/Vector2d';
+import * as PIXI from 'pixi.js'
+import { Vector2d } from '../model/Vector2d'
 import {
-    IBallParams,
-    IPlayerParams,
-    IKeys,
-    IScreenSize,
-    createColorOptions,
-    IPlayerNpcParams,
-    IAppHelperParams,
-    IFieldParams,
-} from "atari-monk-ball-game-api";
-import { playerUrlParam } from '../utils/urlParams';
+  IBallParams,
+  IPlayerParams,
+  IKeys,
+  IScreenSize,
+  createColorOptions,
+  IPlayerNpcParams,
+  IAppHelperParams,
+  IFieldParams,
+} from 'atari-monk-ball-game-api'
+import { playerUrlParam } from '../utils/urlParams'
 
-const green = 0x00ff00;
-const darkGreen = 0x004400;
-const blue = 0x0000ff;
-const red = 0xff0000;
+const lightGreen = 0x00ff00
+const black = 0x000000
+const green = 0x00ff00
+const darkGreen = 0x004400
+const blue = 0x0000ff
+const red = 0xff0000
 
 export const keys: IKeys = {
   left: 'ArrowLeft',
@@ -26,19 +28,19 @@ export const keys: IKeys = {
   d: 'd',
   w: 'w',
   s: 's',
-};
+}
 
 export const screenSize: IScreenSize = {
   width: 800,
   height: 600,
-};
+}
 
 export const appHelperParams: IAppHelperParams = {
   screenSize,
-  backgroundColor: 0x000000,
+  backgroundColor: black,
   fullScreen: false,
   canvasId: 'canvas',
-};
+}
 
 export const getPixiAppParams = (
   canvas: PIXI.ICanvas
@@ -46,15 +48,15 @@ export const getPixiAppParams = (
   const appOptions: Partial<PIXI.IApplicationOptions> = {
     view: canvas,
     backgroundColor: appHelperParams.backgroundColor,
-  };
-  if (appHelperParams.fullScreen) {
-    appOptions.resizeTo = window;
-  } else {
-    appOptions.width = screenSize.width;
-    appOptions.height = screenSize.height;
   }
-  return appOptions;
-};
+  if (appHelperParams.fullScreen) {
+    appOptions.resizeTo = window
+  } else {
+    appOptions.width = screenSize.width
+    appOptions.height = screenSize.height
+  }
+  return appOptions
+}
 
 export const playerNpcParams: IPlayerNpcParams = {
   position: new Vector2d(
@@ -66,9 +68,9 @@ export const playerNpcParams: IPlayerNpcParams = {
   toString() {
     return `Params: ${this.position.toString('position')}, radius: ${
       this.radius
-    }, ${this.colors.toString()}`;
+    }, ${this.colors.toString()}`
   },
-};
+}
 
 export const playerParams: IPlayerParams = {
   position: new Vector2d(
@@ -81,7 +83,7 @@ export const playerParams: IPlayerParams = {
   screenSize,
   keys,
   colors: createColorOptions(green, blue, blue),
-};
+}
 
 export const ballParams: IBallParams = {
   position: new Vector2d(screenSize.width / 2, screenSize.height / 2),
@@ -93,12 +95,12 @@ export const ballParams: IBallParams = {
       'position'
     )}, ${this.velocity.toString('velocity')} radius: ${
       this.radius
-    }, ${this.colors.toString()}`;
+    }, ${this.colors.toString()}`
   },
-};
+}
 
 export const fieldParams: IFieldParams = {
   position: new Vector2d(screenSize.width / 2, screenSize.height / 2),
   size: new Vector2d(600, 300),
   color: darkGreen,
-};
+}

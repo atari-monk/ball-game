@@ -11,6 +11,7 @@ import { AppHelper } from './AppHelper'
 import { GameObjectManager } from '../game-obj/GameObjectManager'
 import { Collider } from '../game-updateable/Collider'
 import { BallGame } from '../game/BallGame'
+import { mobileState } from '../mobile/mobileState'
 
 export abstract class AppFactoryBase implements IRegister {
   constructor(protected readonly container: Container) {}
@@ -19,7 +20,7 @@ export abstract class AppFactoryBase implements IRegister {
     this.container
       .bind<IAppHelper>(AppHelper)
       .toDynamicValue(() => {
-        return new AppHelper(appHelperParams)
+        return new AppHelper(appHelperParams, mobileState)
       })
       .inSingletonScope()
 

@@ -40,6 +40,7 @@ export { KeyboardInputV1 } from './keyboard/KeyboardInputV1'
 export { KeyboardInputV2 } from './keyboard/KeyboardInputV2'
 //mobile
 export { MobileDetectionService } from './mobile/MobileDetectionService'
+export { mobileState } from './mobile/mobileState'
 //model
 export { Vector2d } from './model/Vector2d'
 //player

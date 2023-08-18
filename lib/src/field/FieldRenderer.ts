@@ -1,11 +1,11 @@
-import * as PIXI from 'pixi.js';
+import * as PIXI from 'pixi.js'
 import {
-    IBasicRenderer,
-    SharedTypes,
-    IFieldModel,
-    IFieldRenderer,
-} from "atari-monk-ball-game-api";
-import { inject, injectable } from 'inversify';
+  IBasicRenderer,
+  SharedTypes,
+  IFieldModel,
+  IFieldRenderer,
+} from 'atari-monk-ball-game-api'
+import { inject, injectable } from 'inversify'
 
 @injectable()
 export class FieldRenderer implements IFieldRenderer {
@@ -15,25 +15,22 @@ export class FieldRenderer implements IFieldRenderer {
   ) {}
 
   draw(stage: PIXI.Container<PIXI.DisplayObject>, model: IFieldModel): void {
-    this.renderRectangle(stage, model);
-    this.renderPosition(stage, model);
+    this.renderRectangle(stage, model)
+    this.renderPosition(stage, model)
   }
 
   private renderRectangle(
     stage: PIXI.Container<PIXI.DisplayObject>,
     model: IFieldModel
   ) {
-    const centerX = model.position.x - model.size.x / 2;
-    const centerY = model.position.y - model.size.y / 2;
-
     this.renderer.drawRectangle(
       stage,
       model.color,
-      centerX,
-      centerY,
+      model.position.x,
+      model.position.y,
       model.size.x,
       model.size.y
-    );
+    )
   }
 
   private renderPosition(
@@ -46,6 +43,6 @@ export class FieldRenderer implements IFieldRenderer {
       model.position.x,
       model.position.y,
       2
-    );
+    )
   }
 }
