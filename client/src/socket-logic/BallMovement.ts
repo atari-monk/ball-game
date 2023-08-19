@@ -16,6 +16,7 @@ export class BallMovement extends SocketLogicUnit {
         newVector: new Vector2d(typedObj.newVector.x, typedObj.newVector.y),
       }
       this.ballManager.updateBallPosition(data.newVector)
+      console.log('ball pos updated:', data.newVector)
     } catch (error) {
       console.log(error)
     }
