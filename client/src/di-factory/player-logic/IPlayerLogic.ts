@@ -1,4 +1,4 @@
-import { IPlayerManager } from '../../IPlayerManager'
+import { IPlayerManager } from 'atari-monk-ball-game-client-api'
 import { EventEmitterLogicManager } from '../../lib/emitter-logic/EventEmitterLogicManager'
 import { SocketLogicManager } from '../../lib/socket-logic/SocketLogicManager'
 

@@ -14,6 +14,11 @@ $lib = $proj + "lib\"
 Copy-Item $api $lib
 Set-Location $lib
 npm i (Get-Item $pack).Name
+#install in client-api
+$lib = $proj + "client-api\"
+Copy-Item $api $lib
+Set-Location $lib
+npm i (Get-Item $pack).Name
 #install in client
 $client = $proj + "client\"
 Copy-Item $api $client

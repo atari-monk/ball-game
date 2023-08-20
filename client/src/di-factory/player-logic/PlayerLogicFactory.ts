@@ -1,7 +1,7 @@
 import { Container, injectable } from 'inversify'
 import { IDIFactory } from '../IDIFactory'
 import { PlayerManagerCreator } from './PlayerManagerCreator'
-import { IPlayerManager } from '../../IPlayerManager'
+import { IPlayerManager } from 'atari-monk-ball-game-client-api'
 import { PlayerManager } from '../../PlayerManager'
 import { PlayerLogicCreator } from './PlayerLogicCreator'
 import { PlayerConnectLogic } from '../../socket-logic/PlayerConnectLogic'

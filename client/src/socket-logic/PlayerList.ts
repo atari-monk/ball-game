@@ -1,5 +1,5 @@
 import { Socket } from 'socket.io-client'
-import { IPlayerManager } from '../IPlayerManager'
+import { IPlayerManager } from 'atari-monk-ball-game-client-api'
 import { SocketLogicUnit } from '../lib/socket-logic/SocketLogicUnit'
 
 export class PlayerList extends SocketLogicUnit {

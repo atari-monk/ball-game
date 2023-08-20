@@ -6,7 +6,7 @@ import {
   PlayerNpcTypes,
   PlayerTypes,
 } from 'atari-monk-ball-game-lib-api'
-import { IPlayerManager } from '../../IPlayerManager'
+import { IPlayerManager } from 'atari-monk-ball-game-client-api'
 import { PlayerManager } from '../../PlayerManager'
 
 @injectable()

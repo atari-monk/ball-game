@@ -1,4 +1,3 @@
-/* eslint-disable */
 const path = require('path')
 const { CleanWebpackPlugin } = require('clean-webpack-plugin')
 const CopyPlugin = require('copy-webpack-plugin')
@@ -21,10 +20,10 @@ module.exports = {
   },
   output: {
     path: path.resolve(__dirname, 'build'),
-    filename: 'atari-monk-ball-game-client.js',
+    filename: 'atari-monk-ball-game-client-api.js',
     globalObject: 'this',
     library: {
-      name: 'atari-monk-ball-game-client',
+      name: 'atari-monk-ball-game-client-api',
       type: 'umd',
     },
   },
