@@ -1,12 +1,14 @@
 import { Socket } from 'socket.io-client'
 import { IPlayerManager } from '../IPlayerManager'
 import { SocketLogicUnit } from '../lib/socket-logic/SocketLogicUnit'
+import { IBallManager } from '../IBallManager'
 
 export class PlayerConnectLogic extends SocketLogicUnit {
   constructor(
     eventName: string,
     private readonly socket: Socket,
-    private readonly playerManager: IPlayerManager
+    private readonly playerManager: IPlayerManager,
+    private readonly ballManager: IBallManager
   ) {
     super(eventName)
   }
@@ -24,6 +26,8 @@ export class PlayerConnectLogic extends SocketLogicUnit {
       player.model.clientId = clientId
       this.playerManager.removePlayer('0')
       this.playerManager.addPlayer(clientId, player)
+
+      this.ballManager.setClient(clientId)
 
       console.log(`Player connected to server, id: ${clientId}`)
     } catch (err) {

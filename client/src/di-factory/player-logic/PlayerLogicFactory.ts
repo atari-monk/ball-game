@@ -14,6 +14,8 @@ import { PlayerEventEmitterLogicUnit } from '../../emitter-logic/PlayerEventEmit
 import { EventEmitterLogicManager } from '../../lib/emitter-logic/EventEmitterLogicManager'
 import { SharedTypes } from 'atari-monk-ball-game-api'
 import EventEmitter from 'eventemitter3'
+import { BallManager } from '../../BallManager'
+import { IBallManager } from '../../IBallManager'
 
 @injectable()
 export class PlayerLogicFactory implements IDIFactory<IPlayerLogic> {
@@ -38,7 +40,8 @@ export class PlayerLogicFactory implements IDIFactory<IPlayerLogic> {
         return new PlayerConnectLogic(
           'connect',
           container.get<Socket>(Socket),
-          container.get<IPlayerManager>(PlayerManager)
+          container.get<IPlayerManager>(PlayerManager),
+          container.get<IBallManager>(BallManager)
         )
       })
       .inSingletonScope()

@@ -1,10 +1,10 @@
 import { IVectorData } from 'atari-monk-ball-game-api'
-import { BallManager } from '../BallManager'
 import { SocketLogicUnit } from '../lib/socket-logic/SocketLogicUnit'
 import { Vector2d } from '../lib/Vector2d'
+import { IBallManager } from '../IBallManager'
 
 export class BallMovement extends SocketLogicUnit {
-  constructor(eventName: string, private readonly ballManager: BallManager) {
+  constructor(eventName: string, private readonly ballManager: IBallManager) {
     super(eventName)
   }
 

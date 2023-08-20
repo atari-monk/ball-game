@@ -1,4 +1,4 @@
-$server = 'C:\atari-monk\Code\ball-game\server\build'
+$server = 'C:\atari-monk\Code\ball-game\server\build\'
 $port = '3000'
 $url1 = 'http://127.0.0.1:' + $port + '/game/build/index.html?player=1'
 $url2 = 'http://127.0.0.1:' + $port + '/game/build/index.html?player=2'
@@ -29,7 +29,7 @@ function set-folder($folder) {
 
 function start-server {
   try {
-    node game-server
+    ndb .\game-server.js
   }
   catch {
     Write-Host "An error occurred while starting the server."

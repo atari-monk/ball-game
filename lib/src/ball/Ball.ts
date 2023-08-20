@@ -36,7 +36,6 @@ export class Ball extends GameObject implements IBall {
 
   private startEmitPositionTimeout() {
     this.timeoutId = window.setInterval(() => {
-      if (this._model.velocity.x === 0 && this._model.velocity.y === 0) return
       this.emitPosition()
     }, 50)
   }
@@ -53,7 +52,7 @@ export class Ball extends GameObject implements IBall {
   private emitPosition() {
     if (this._model.velocity.x === 0 && this._model.velocity.y === 0) return
     const data: IVectorData = {
-      clientId: '0',
+      clientId: this._model.clientId,
       newVector: this._model.position,
     }
     this.emitter.emit(this.PositionEvent, data)

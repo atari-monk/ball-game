@@ -17,6 +17,8 @@ import { BallEventEmitterLogicUnit } from '../emitter-logic/BallEventEmitterLogi
 import { SocketLogicManager } from '../lib/socket-logic/SocketLogicManager'
 import { EventEmitterLogicManager } from '../lib/emitter-logic/EventEmitterLogicManager'
 import { ISocketConfig } from '../ISocketConfig'
+import { IPlayerManager } from '../IPlayerManager'
+import { IBallManager } from '../IBallManager'
 
 export class ClientFactory {
   private socket: Socket
@@ -29,8 +31,9 @@ export class ClientFactory {
     ball: IBall
   ) {
     this.socket = this.produceSocketLogic()
-    this.producePlayerSocketLogic(player, playerNpc)
-    this.produceBallSocketLogic(ball)
+    const ballManager = new BallManager(ball)
+    this.producePlayerSocketLogic(player, playerNpc, ballManager)
+    this.produceBallSocketLogic(ballManager)
   }
 
   private produceSocketLogic() {
@@ -57,10 +60,16 @@ export class ClientFactory {
     return clientSocketLogicManager
   }
 
-  private producePlayerSocketLogic(player: IPlayer, playerNpc: IPlayerNpc) {
+  private producePlayerSocketLogic(
+    player: IPlayer,
+    playerNpc: IPlayerNpc,
+    ballManager: IBallManager
+  ) {
     const playerManager = this.createPlayerManager(player, playerNpc)
-    const playerSocketLogicManager =
-      this.createPlayerSocketLogic(playerManager)
+    const playerSocketLogicManager = this.createPlayerSocketLogic(
+      playerManager,
+      ballManager
+    )
     const playerEmitterLogicManager = this.createPlayerEmitterLogic()
     playerSocketLogicManager.initializeSocket(this.socket)
     playerEmitterLogicManager.initializeEmitter(this.eventEmitter)
@@ -73,12 +82,16 @@ export class ClientFactory {
     return playerManager
   }
 
-  private createPlayerSocketLogic(playerManager: PlayerManager) {
+  private createPlayerSocketLogic(
+    playerManager: IPlayerManager,
+    ballManager: IBallManager
+  ) {
     const playerSocketLogicManager = new SocketLogicManager()
     const playerConnectLogic = new PlayerConnectLogic(
       'connect',
       this.socket,
-      playerManager
+      playerManager,
+      ballManager
     )
     const playerList = new PlayerList(
       'clientIdList',
@@ -103,15 +116,14 @@ export class ClientFactory {
     return playerEmitterLogicManager
   }
 
-  private produceBallSocketLogic(ball: IBall) {
-    const ballManager = new BallManager(ball)
+  private produceBallSocketLogic(ballManager: IBallManager) {
     const ballSocketLogicManager = this.createBallSocketLogic(ballManager)
     const ballEmitterLogicManager = this.createBallEmitterLogic()
     ballSocketLogicManager.initializeSocket(this.socket)
     ballEmitterLogicManager.initializeEmitter(this.eventEmitter)
   }
 
-  private createBallSocketLogic(ballManager: BallManager) {
+  private createBallSocketLogic(ballManager: IBallManager) {
     const ballSocketLogicManager = new SocketLogicManager()
     const ballMovement = new BallMovement('ballMovement', ballManager)
     const ballVelocity = new BallVelocity('ballVelocity', ballManager)
