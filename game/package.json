@@ -7,7 +7,9 @@
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "build-ts": "tsc",
-    "start-dev": "powershell -ExecutionPolicy Bypass -File ./script/run.ps1"
+    "run-local": "powershell -ExecutionPolicy Bypass -File ./script/run-local.ps1",
+    "run-prod-srv": "powershell -ExecutionPolicy Bypass -File ./script/run-prod-srv.ps1",
+    "run-prod": "powershell -ExecutionPolicy Bypass -File ./script/run-prod.ps1"
   },
   "keywords": [],
   "author": "atari-monk",

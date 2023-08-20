@@ -1,7 +1,9 @@
 $server = 'C:\atari-monk\Code\ball-game\server\build\'
 $port = '3000'
-$url1 = 'http://127.0.0.1:' + $port + '/game/build/index.html?player=1'
-$url2 = 'http://127.0.0.1:' + $port + '/game/build/index.html?player=2'
+$domain = 'http://127.0.0.1:' 
+$path = '/game/build/index.html?player='
+$url1 = $domain + $port + $path + '1'
+$url2 = $domain + $port + $path + '2'
 $chrome = "C:\Program Files\Google\Chrome\Application\chrome.exe"
 
 function start-url {
