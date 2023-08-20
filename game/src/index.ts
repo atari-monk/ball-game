@@ -8,7 +8,7 @@ import {
   fieldParams,
   mobileState,
 } from 'atari-monk-ball-game-lib'
-import { IFieldParams } from 'atari-monk-ball-game-api'
+import { IFieldParams } from 'atari-monk-ball-game-lib-api'
 import { mobilePortrait } from './data/mobilePortrait'
 
 let fieldConfig: IFieldParams

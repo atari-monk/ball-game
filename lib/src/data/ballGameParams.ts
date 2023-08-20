@@ -9,7 +9,7 @@ import {
   IPlayerNpcParams,
   IAppHelperParams,
   IFieldParams,
-} from 'atari-monk-ball-game-api'
+} from 'atari-monk-ball-game-lib-api'
 import { playerUrlParam } from '../utils/urlParams'
 
 const lightGreen = 0x00ff00

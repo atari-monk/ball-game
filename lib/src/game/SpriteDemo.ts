@@ -1,4 +1,4 @@
-import { IGameLoop, IGameObjectManager } from 'atari-monk-ball-game-api'
+import { IGameLoop, IGameObjectManager } from 'atari-monk-ball-game-lib-api'
 import { inject, injectable } from 'inversify'
 import { GameObjectManager } from '../game-obj/GameObjectManager'
 import { PixiApplicationWrapper } from '../app/PixiApplicationWrapper'

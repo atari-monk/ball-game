@@ -1,5 +1,5 @@
 import { injectable } from 'inversify'
-import { IMobileDetectionService } from 'atari-monk-ball-game-api'
+import { IMobileDetectionService } from 'atari-monk-ball-game-lib-api'
 import isMobile from 'is-mobile'
 
 @injectable()

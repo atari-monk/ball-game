@@ -5,7 +5,7 @@ import {
   IPlayerNpc,
   PlayerNpcTypes,
   PlayerTypes,
-} from 'atari-monk-ball-game-api'
+} from 'atari-monk-ball-game-lib-api'
 import { IPlayerManager } from '../../IPlayerManager'
 import { PlayerManager } from '../../PlayerManager'
 

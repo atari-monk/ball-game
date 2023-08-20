@@ -5,7 +5,7 @@ import {
     IDIFactory,
     IPlayerNpc,
     PlayerNpcTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { PlayerNpcModel } from './PlayerNpcModel';
 import { playerNpcParams } from '../data/ballGameParams';
 import { CircleRenderer } from './CircleRenderer';

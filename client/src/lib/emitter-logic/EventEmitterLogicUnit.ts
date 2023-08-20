@@ -1,5 +1,5 @@
 import EventEmitter from 'eventemitter3'
-import { IEventEmitterLogicUnit } from 'atari-monk-ball-game-api'
+import { IEventEmitterLogicUnit } from 'atari-monk-ball-game-lib-api'
 
 export abstract class EventEmitterLogicUnit implements IEventEmitterLogicUnit {
   constructor(private readonly _eventName: string) {}

@@ -1,5 +1,5 @@
 import { inject, injectable } from 'inversify';
-import { ICreate } from "atari-monk-ball-game-api";
+import { ICreate } from "atari-monk-ball-game-lib-api";
 import { Types } from './types';
 import { DisconnectLogicUnit } from '../DisconnectLogicUnit';
 import { PlayerMovement } from '../PlayerMovement';

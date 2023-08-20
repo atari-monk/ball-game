@@ -1,4 +1,4 @@
-import { IField, IFieldParams } from 'atari-monk-ball-game-api'
+import { IField, IFieldParams } from 'atari-monk-ball-game-lib-api'
 import {
   Field,
   FieldModel,

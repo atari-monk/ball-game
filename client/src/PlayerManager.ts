@@ -1,6 +1,6 @@
 import { injectable } from 'inversify'
 import { Socket } from 'socket.io-client'
-import { IPlayer, IVector2d, IPlayerNpc } from 'atari-monk-ball-game-api'
+import { IPlayer, IVector2d, IPlayerNpc } from 'atari-monk-ball-game-lib-api'
 import { IPlayerManager } from './IPlayerManager.js'
 
 @injectable()

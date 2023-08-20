@@ -3,7 +3,7 @@ import {
     IGameUpdateable,
     IGameObjectManager,
     IBallGame,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { inject, injectable } from 'inversify';
 import { GameObjectManager } from '../game-obj/GameObjectManager';
 import { Collider } from '../game-updateable/Collider';

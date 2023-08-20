@@ -1,4 +1,4 @@
-import { IVector2d } from 'atari-monk-ball-game-api'
+import { IVector2d } from 'atari-monk-ball-game-lib-api'
 
 export interface IBallManager {
   setClient(clientId: string): void

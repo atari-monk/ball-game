@@ -5,7 +5,7 @@ import {
     IField,
     FieldTypes,
     IDIFactory,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { FieldRenderer } from './FieldRenderer';
 import { Field } from './Field';
 import { FieldModel } from './FieldModel';

@@ -1,8 +1,8 @@
 {
-  "name": "atari-monk-ball-game-api",
+  "name": "atari-monk-ball-game-lib-api",
   "version": "0.0.1",
-  "description": "Typescript interfaces for game helper library based on pixi.",
-  "main": "atari-monk-ball-game-api.js",
+  "description": "Typescript interfaces for game library based on pixi.",
+  "main": "atari-monk-ball-game-lib-api.js",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "build-ts": "tsc",

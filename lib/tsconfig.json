@@ -1,9 +1,9 @@
 {
   "compilerOptions": {
-    "target": "es6",
+    "target": "ESNext",
     "lib": ["es6", "dom"],
     "types": ["reflect-metadata"],
-    "module": "commonjs",
+    "module": "CommonJS",
     "outDir": "build",
     "declaration": true,
     "strict": true,

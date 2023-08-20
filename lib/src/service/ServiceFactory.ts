@@ -4,7 +4,7 @@ import {
     IRegister,
     IGameObjectManager,
     SharedTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { BasicRenderer } from '../BasicRenderer';
 import { GameObjectManager } from '../game-obj/GameObjectManager';
 import EventEmitter from 'eventemitter3';

@@ -5,7 +5,7 @@ import {
   IGameUpdateable,
   IBallGame,
   IRegister,
-} from 'atari-monk-ball-game-api'
+} from 'atari-monk-ball-game-lib-api'
 import { appHelperParams } from '../data/ballGameParams'
 import { AppHelper } from './AppHelper'
 import { GameObjectManager } from '../game-obj/GameObjectManager'

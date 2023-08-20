@@ -1,4 +1,4 @@
-import { IMobileFlags } from 'atari-monk-ball-game-api'
+import { IMobileFlags } from 'atari-monk-ball-game-lib-api'
 
 export const mobileState: IMobileFlags = {
   mobile: true,

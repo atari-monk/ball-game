@@ -1,6 +1,6 @@
 import { injectable } from 'inversify';
 import * as PIXI from 'pixi.js';
-import { IBasicRenderer } from "atari-monk-ball-game-api";
+import { IBasicRenderer } from "atari-monk-ball-game-lib-api";
 
 @injectable()
 export class BasicRenderer implements IBasicRenderer {

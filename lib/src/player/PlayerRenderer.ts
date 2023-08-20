@@ -4,7 +4,7 @@ import {
     IPlayerRenderer,
     IPlayerModel,
     SharedTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { inject, injectable } from 'inversify';
 
 @injectable()

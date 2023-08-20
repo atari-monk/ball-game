@@ -6,8 +6,9 @@ Set-Location build
 npm pack
 #paths
 $proj = "C:\atari-monk\Code\ball-game\"
-$pack = "atari-monk-ball-game-api-0.0.1.tgz"
-$api = $proj + "api\build\" + $pack
+$pack = "atari-monk-ball-game-lib-api-0.0.1.tgz"
+$folder = "lib-api\build\"
+$api = $proj + $folder + $pack
 #install in lib
 $lib = $proj + "lib\"
 Copy-Item $api $lib

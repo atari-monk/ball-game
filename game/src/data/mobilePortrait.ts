@@ -1,4 +1,4 @@
-import { IFieldParams, IScreenSize } from 'atari-monk-ball-game-api'
+import { IFieldParams, IScreenSize } from 'atari-monk-ball-game-lib-api'
 import { Vector2d } from 'atari-monk-ball-game-lib'
 
 const veryLightGreen = 0xccffcc

@@ -5,7 +5,7 @@ import {
   IFieldModel,
   IFieldRenderer,
   FieldTypes,
-} from 'atari-monk-ball-game-api'
+} from 'atari-monk-ball-game-lib-api'
 import { GameObject } from '../game-obj/GameObject'
 import { StringBuilder } from '../utils/StringBuilder'
 

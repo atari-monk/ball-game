@@ -1,6 +1,6 @@
 import { inject, injectable } from 'inversify'
 import { BallEventEmitterLogicUnit } from '../../emitter-logic/BallEventEmitterLogicUnit'
-import { BallTypes, ICreate } from 'atari-monk-ball-game-api'
+import { BallTypes, ICreate } from 'atari-monk-ball-game-lib-api'
 import { EventEmitterLogicManager } from '../../lib/emitter-logic/EventEmitterLogicManager'
 
 @injectable()

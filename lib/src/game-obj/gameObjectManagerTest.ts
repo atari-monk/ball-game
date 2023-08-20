@@ -1,6 +1,6 @@
 import 'reflect-metadata';
 import { Container } from 'inversify';
-import { IGameObjectManager, SharedTypes } from "atari-monk-ball-game-api";
+import { IGameObjectManager, SharedTypes } from "atari-monk-ball-game-lib-api";
 import { PlayerFactory } from '../player/PlayerFactory';
 import { ServiceFactory } from '../service/ServiceFactory';
 import { PlayerNpcFactory } from '../player-npc/PlayerNpcFactory';

@@ -1,4 +1,4 @@
-import { IBall } from "atari-monk-ball-game-api";
+import { IBall } from "atari-monk-ball-game-lib-api";
 import {
     Ball,
     BallModel,

@@ -20,10 +20,10 @@ module.exports = {
     },
     output: {
         path: path.resolve(__dirname, "build"),
-        filename: "atari-monk-ball-game-api.js",
+        filename: "atari-monk-ball-game-lib-api.js",
         globalObject: "this",
         library: {
-            name: "atari-monk-ball-game-api",
+            name: "atari-monk-ball-game-lib-api",
             type: "umd",
         },
     },

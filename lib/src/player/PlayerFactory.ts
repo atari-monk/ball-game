@@ -10,7 +10,7 @@ import {
     IKeys,
     PlayerTypes,
     SharedTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { keys, playerParams } from '../data/ballGameParams';
 import { PlayerRenderer } from './PlayerRenderer';
 import { DirectionFromKeyboard } from '../keyboard/DirectionFromKeyboard';

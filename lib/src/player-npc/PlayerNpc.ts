@@ -5,7 +5,7 @@ import {
     ICircleRenderer,
     IPlayerNpcModel,
     PlayerNpcTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { GameObject } from '../game-obj/GameObject';
 
 @injectable()

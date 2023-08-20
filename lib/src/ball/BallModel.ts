@@ -1,5 +1,5 @@
 import { Vector2d } from '../model/Vector2d';
-import { IBallParams, IBallModel, IVector2d } from "atari-monk-ball-game-api";
+import { IBallParams, IBallModel, IVector2d } from "atari-monk-ball-game-lib-api";
 
 export class BallModel implements IBallModel {
   private _clientId: string;

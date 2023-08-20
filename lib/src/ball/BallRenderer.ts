@@ -5,7 +5,7 @@ import {
     IBallRenderer,
     IBallModel,
     SharedTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 
 @injectable()
 export class BallRenderer implements IBallRenderer {

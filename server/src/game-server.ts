@@ -1,6 +1,6 @@
 import 'reflect-metadata'
 import { GameServer } from './GameServer'
-import { ICreate, IDIFactory } from 'atari-monk-ball-game-api'
+import { ICreate, IDIFactory } from 'atari-monk-ball-game-lib-api'
 import { ServerSimpleFactory } from './simple-factory/ServerSimpleFactory'
 import { ServerDIFactory } from './di-factory/ServerDIFactory'
 

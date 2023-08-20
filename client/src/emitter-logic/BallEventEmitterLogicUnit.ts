@@ -1,5 +1,5 @@
 import { Socket } from 'socket.io-client'
-import { IVectorData } from 'atari-monk-ball-game-api'
+import { IVectorData } from 'atari-monk-ball-game-lib-api'
 import { EventEmitterLogicUnit } from '../lib/emitter-logic/EventEmitterLogicUnit'
 
 export class BallEventEmitterLogicUnit extends EventEmitterLogicUnit {

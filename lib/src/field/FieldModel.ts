@@ -1,4 +1,4 @@
-import { IVector2d, IFieldParams, IFieldModel } from "atari-monk-ball-game-api";
+import { IVector2d, IFieldParams, IFieldModel } from "atari-monk-ball-game-lib-api";
 
 export class FieldModel implements IFieldModel {
   private _position: IVector2d;

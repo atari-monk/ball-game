@@ -1,5 +1,5 @@
 import { Socket } from 'socket.io'
-import { IVectorData } from 'atari-monk-ball-game-api'
+import { IVectorData } from 'atari-monk-ball-game-lib-api'
 import { SrvSctLogicUnit } from './lib/srv-sct-logic/SrvSctLogicUnit'
 
 export class BallMovement extends SrvSctLogicUnit {

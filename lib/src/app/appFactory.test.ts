@@ -8,7 +8,7 @@ import {
   IGameObjectManager,
   IGameUpdateable,
   IBallGame,
-} from 'atari-monk-ball-game-api'
+} from 'atari-monk-ball-game-lib-api'
 import { configureContainerForTest } from '../di-container/inversify.test.config'
 import { AppHelper } from './AppHelper'
 import { GameObjectManager } from '../game-obj/GameObjectManager'

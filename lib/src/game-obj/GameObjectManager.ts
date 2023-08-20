@@ -1,4 +1,4 @@
-import { IGameObjectManager } from "atari-monk-ball-game-api";
+import { IGameObjectManager } from "atari-monk-ball-game-lib-api";
 import { Ball } from '../ball/Ball';
 import { GameObject } from './GameObject';
 import { Player } from '../player/Player';

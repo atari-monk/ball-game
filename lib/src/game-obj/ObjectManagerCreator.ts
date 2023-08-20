@@ -8,7 +8,7 @@ import {
     PlayerTypes,
     PlayerNpcTypes,
     BallTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { GameObjectManager } from './GameObjectManager';
 
 @injectable()

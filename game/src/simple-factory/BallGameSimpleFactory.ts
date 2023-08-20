@@ -3,8 +3,7 @@ import { PlayersFactory } from './PlayersFactory'
 import { BallFactory } from './BallFactory'
 import { ClientFactory, ISocketConfig } from 'atari-monk-ball-game-client'
 import { FieldFactory } from './FieldFactory'
-import { IFieldParams } from 'atari-monk-ball-game-api'
-import { IMobileFlags } from '../../../api/src/mobile/IMobileFlags'
+import { IFieldParams, IMobileFlags } from 'atari-monk-ball-game-lib-api'
 
 export class BallGameSimpleFactory {
   constructor(

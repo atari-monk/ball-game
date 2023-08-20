@@ -6,7 +6,7 @@ import {
     IColorParams,
     ICircle,
     SharedTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 
 @injectable()
 export class CircleRenderer implements ICircleRenderer {

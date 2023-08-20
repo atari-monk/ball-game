@@ -1,5 +1,5 @@
 import { inject, injectable } from 'inversify'
-import { ICreate } from 'atari-monk-ball-game-api'
+import { ICreate } from 'atari-monk-ball-game-lib-api'
 import { PlayerConnectLogic } from '../../socket-logic/PlayerConnectLogic'
 import { PlayerList } from '../../socket-logic/PlayerList'
 import { PlayerMovement } from '../../socket-logic/PlayerMovement'

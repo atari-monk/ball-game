@@ -1,6 +1,6 @@
 import { Container } from 'inversify';
 import { instance, mock } from 'ts-mockito';
-import { IDIFactoryForTest } from "atari-monk-ball-game-api";
+import { IDIFactoryForTest } from "atari-monk-ball-game-lib-api";
 import { AppFactoryBase } from './AppFactoryBase';
 import { PixiApplicationWrapper } from './PixiApplicationWrapper';
 

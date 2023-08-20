@@ -8,8 +8,7 @@ import {
   getPixiAppParams,
   getCanvasForPixi,
 } from 'atari-monk-ball-game-lib'
-import { IGameObjectManager } from 'atari-monk-ball-game-api'
-import { IMobileFlags } from '../../../api/src/mobile/IMobileFlags'
+import { IGameObjectManager, IMobileFlags } from 'atari-monk-ball-game-lib-api'
 
 export class AppFactory {
   private _pixiApp: PIXI.Application

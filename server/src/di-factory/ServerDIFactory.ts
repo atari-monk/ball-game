@@ -1,4 +1,4 @@
-import { IDIFactory } from "atari-monk-ball-game-api";
+import { IDIFactory } from "atari-monk-ball-game-lib-api";
 import { injectable, Container } from 'inversify';
 import express from 'express';
 import http from 'http';

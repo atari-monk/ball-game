@@ -1,5 +1,5 @@
 import EventEmitter from 'eventemitter3'
-import { IEventEmitterLogicUnit } from 'atari-monk-ball-game-api'
+import { IEventEmitterLogicUnit } from 'atari-monk-ball-game-lib-api'
 import { LogicManagerGeneric } from '../logic/LogicManagerGeneric'
 
 export class EventEmitterLogicManager extends LogicManagerGeneric<IEventEmitterLogicUnit> {

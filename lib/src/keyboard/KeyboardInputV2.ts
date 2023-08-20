@@ -1,4 +1,4 @@
-import { IKeyboardObserver } from "atari-monk-ball-game-api";
+import { IKeyboardObserver } from "atari-monk-ball-game-lib-api";
 
 export class KeyboardInputV2 {
   private observers: Set<IKeyboardObserver>;

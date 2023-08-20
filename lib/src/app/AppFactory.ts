@@ -1,5 +1,5 @@
 import { Container } from 'inversify'
-import { IDIFactory, IAppHelper, IBallGame } from 'atari-monk-ball-game-api'
+import { IDIFactory, IAppHelper, IBallGame } from 'atari-monk-ball-game-lib-api'
 import { getPixiAppParams } from '../data/ballGameParams'
 import { getCanvasForPixi } from '../utils/ui'
 import { AppFactoryBase } from './AppFactoryBase'

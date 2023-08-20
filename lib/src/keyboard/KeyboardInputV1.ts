@@ -1,5 +1,5 @@
 import { injectable } from 'inversify';
-import { IKeyboardInput } from "atari-monk-ball-game-api";
+import { IKeyboardInput } from "atari-monk-ball-game-lib-api";
 
 @injectable()
 export class KeyboardInputV1 implements IKeyboardInput {

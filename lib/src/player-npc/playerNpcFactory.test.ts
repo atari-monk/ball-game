@@ -2,7 +2,7 @@ import { Container } from 'inversify';
 import 'reflect-metadata';
 import { expect } from 'chai';
 import 'mocha';
-import { IPlayerNpc } from "atari-monk-ball-game-api";
+import { IPlayerNpc } from "atari-monk-ball-game-lib-api";
 import { configureContainerForTest } from '../di-container/inversify.test.config';
 import { PlayerNpc } from './PlayerNpc';
 

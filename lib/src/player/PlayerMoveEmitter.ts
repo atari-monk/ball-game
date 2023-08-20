@@ -4,7 +4,7 @@ import {
     IVector2d,
     IPlayerUpdater,
     PlayerTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { PositionEmitter } from '../PositionEmitter';
 import { Vector2d } from '../model/Vector2d';
 

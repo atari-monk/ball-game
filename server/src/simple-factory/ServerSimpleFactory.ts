@@ -1,4 +1,4 @@
-import { ICreate } from "atari-monk-ball-game-api";
+import { ICreate } from "atari-monk-ball-game-lib-api";
 import express from 'express';
 import http from 'http';
 import { Server } from 'socket.io';

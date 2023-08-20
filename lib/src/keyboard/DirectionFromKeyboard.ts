@@ -4,7 +4,7 @@ import {
     IKeys,
     IVector2d,
     PlayerTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { KeyboardInputV1 } from './KeyboardInputV1';
 import { Vector2d } from '../model/Vector2d';
 

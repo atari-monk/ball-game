@@ -3,7 +3,7 @@ import {
     IPlayerParams,
     IPlayerModel,
     IVector2d,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 
 export class PlayerModel implements IPlayerModel {
   private _clientId: string;

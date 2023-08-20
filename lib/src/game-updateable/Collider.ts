@@ -1,5 +1,5 @@
 import { injectable } from 'inversify';
-import { IBall, IPlayer, IGameUpdateable } from "atari-monk-ball-game-api";
+import { IBall, IPlayer, IGameUpdateable } from "atari-monk-ball-game-lib-api";
 
 @injectable()
 export class Collider implements IGameUpdateable {

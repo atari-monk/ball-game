@@ -1,4 +1,4 @@
-import { IPlayer, IPlayerNpc } from 'atari-monk-ball-game-api';
+import { IPlayer, IPlayerNpc } from 'atari-monk-ball-game-lib-api';
 import {
     BasicRenderer,
     CircleRenderer,

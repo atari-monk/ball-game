@@ -5,7 +5,7 @@ import {
     IBallRenderer,
     IDIFactory,
     BallTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { ballParams } from '../data/ballGameParams';
 import { BallRenderer } from './BallRenderer';
 import { BallModel } from './BallModel';

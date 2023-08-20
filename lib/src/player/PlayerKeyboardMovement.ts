@@ -4,7 +4,7 @@ import {
     IPlayerUpdater,
     PlayerTypes,
     IPlayer,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { Vector2d } from '../model/Vector2d';
 
 @injectable()

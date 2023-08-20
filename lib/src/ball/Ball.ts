@@ -7,7 +7,7 @@ import {
   IVectorData,
   BallTypes,
   SharedTypes,
-} from 'atari-monk-ball-game-api'
+} from 'atari-monk-ball-game-lib-api'
 import { GameObject } from '../game-obj/GameObject'
 import { Vector2d } from '../model/Vector2d'
 import EventEmitter from 'eventemitter3'

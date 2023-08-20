@@ -1,4 +1,4 @@
-import { IVectorData } from 'atari-monk-ball-game-api'
+import { IVectorData } from 'atari-monk-ball-game-lib-api'
 import { SocketLogicUnit } from '../lib/socket-logic/SocketLogicUnit'
 import { Vector2d } from '../lib/Vector2d'
 import { IBallManager } from '../IBallManager'

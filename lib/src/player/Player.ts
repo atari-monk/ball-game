@@ -7,7 +7,7 @@ import {
     IPlayerRenderer,
     IPlayerUpdater,
     PlayerTypes,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 import { GameObject } from '../game-obj/GameObject';
 import { Vector2d } from '../model/Vector2d';
 import { StringBuilder } from '../utils/StringBuilder';

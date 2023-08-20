@@ -2,7 +2,7 @@ import {
     IPlayerNpcParams,
     IPlayerNpcModel,
     IVector2d,
-} from "atari-monk-ball-game-api";
+} from "atari-monk-ball-game-lib-api";
 
 export class PlayerNpcModel implements IPlayerNpcModel {
   private _clientId: string;

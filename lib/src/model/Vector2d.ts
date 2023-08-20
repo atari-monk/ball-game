@@ -1,4 +1,4 @@
-import { IVector2d } from 'atari-monk-ball-game-api';
+import { IVector2d } from 'atari-monk-ball-game-lib-api';
 
 export class Vector2d implements IVector2d {
   private _x: number;
