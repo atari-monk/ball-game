@@ -1,6 +1,6 @@
 import { BallTypes, IBall, IVector2d } from 'atari-monk-ball-game-lib-api'
 import { inject, injectable } from 'inversify'
-import { IBallManager } from './IBallManager'
+import { IBallManager } from 'atari-monk-ball-game-client-api'
 
 @injectable()
 export class BallManager implements IBallManager {

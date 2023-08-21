@@ -1,7 +1,7 @@
 import { IVectorData } from 'atari-monk-ball-game-lib-api'
 import { SocketLogicUnit } from '../lib/socket-logic/SocketLogicUnit'
 import { Vector2d } from '../lib/Vector2d'
-import { IBallManager } from '../IBallManager'
+import { IBallManager } from 'atari-monk-ball-game-client-api'
 
 export class BallVelocity extends SocketLogicUnit {
   constructor(eventName: string, private readonly ballManager: IBallManager) {

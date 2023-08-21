@@ -1,5 +1,5 @@
 import EventEmitter from 'eventemitter3'
-import { IEventEmitterLogicUnit } from 'atari-monk-ball-game-lib-api'
+import { IEventEmitterLogicUnit } from 'atari-monk-ball-game-client-api'
 
 export abstract class EventEmitterLogicUnit implements IEventEmitterLogicUnit {
   constructor(private readonly _eventName: string) {}
@@ -9,5 +9,5 @@ export abstract class EventEmitterLogicUnit implements IEventEmitterLogicUnit {
   }
 
   // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  protected abstract logicUnit(...args: any[]): void;
+  protected abstract logicUnit(...args: any[]): void
 }

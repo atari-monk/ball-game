@@ -15,7 +15,7 @@ import { EventEmitterLogicManager } from '../../lib/emitter-logic/EventEmitterLo
 import { SharedTypes } from 'atari-monk-ball-game-lib-api'
 import EventEmitter from 'eventemitter3'
 import { BallManager } from '../../BallManager'
-import { IBallManager } from '../../IBallManager'
+import { IBallManager } from 'atari-monk-ball-game-client-api'
 
 @injectable()
 export class PlayerLogicFactory implements IDIFactory<IPlayerLogic> {

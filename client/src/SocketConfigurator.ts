@@ -1,6 +1,8 @@
-import { Environment } from './Environment'
-import { ISocketConfig } from './ISocketConfig'
-import { ISocketConfigurator } from './ISocketConfigurator'
+import {
+  Environment,
+  ISocketConfig,
+  ISocketConfigurator,
+} from 'atari-monk-ball-game-client-api'
 import { injectable } from 'inversify'
 
 @injectable()

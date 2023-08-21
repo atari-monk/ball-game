@@ -16,9 +16,8 @@ import { BallVelocity } from '../socket-logic/BallVelocity'
 import { BallEventEmitterLogicUnit } from '../emitter-logic/BallEventEmitterLogicUnit'
 import { SocketLogicManager } from '../lib/socket-logic/SocketLogicManager'
 import { EventEmitterLogicManager } from '../lib/emitter-logic/EventEmitterLogicManager'
-import { ISocketConfig } from '../ISocketConfig'
-import { IPlayerManager } from 'atari-monk-ball-game-client-api'
-import { IBallManager } from '../IBallManager'
+import { IPlayerManager, ISocketConfig } from 'atari-monk-ball-game-client-api'
+import { IBallManager } from 'atari-monk-ball-game-client-api'
 
 export class ClientFactory {
   private socket: Socket

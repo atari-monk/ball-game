@@ -1,8 +1,10 @@
 import { Container, injectable } from 'inversify'
 import { Manager, Socket } from 'socket.io-client'
 import { SocketConfigurator } from '../../SocketConfigurator'
-import { ISocketConfigurator } from '../../ISocketConfigurator'
-import { Environment } from '../../Environment'
+import {
+  ISocketConfigurator,
+  Environment,
+} from 'atari-monk-ball-game-client-api'
 import { SocketErrorHandler } from '../../SocketErrorHandler'
 import { IDIFactory } from '../IDIFactory'
 
@@ -33,7 +35,7 @@ export abstract class SocketFactory implements IDIFactory<Socket> {
       .inSingletonScope()
   }
 
-  protected abstract createSocket(container: Container): void;
+  protected abstract createSocket(container: Container): void
 
   public create(container: Container): Socket {
     const socket = container.resolve<Socket>(Socket)
