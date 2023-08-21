@@ -24,7 +24,6 @@
   "dependencies": {
     "eventemitter3": "^5.0.1",
     "pixi.js": "^7.2.4",
-    "socket.io": "^4.7.1",
-    "socket.io-client": "^4.7.1"
+    "socket.io": "^4.7.1"
   }
 }

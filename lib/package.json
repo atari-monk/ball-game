@@ -24,8 +24,7 @@
     "is-mobile": "^4.0.0",
     "pixi.js": "^7.2.4",
     "reflect-metadata": "^0.1.13",
-    "socket.io": "^4.6.2",
-    "socket.io-client": "^4.6.2"
+    "socket.io": "^4.6.2"
   },
   "devDependencies": {
     "@types/chai": "^4.3.5",

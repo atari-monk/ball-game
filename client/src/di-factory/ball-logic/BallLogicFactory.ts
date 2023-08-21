@@ -7,8 +7,11 @@ import { BallEventEmitterLogicUnit } from '../../emitter-logic/BallEventEmitterL
 import { Socket } from 'socket.io-client'
 import { BallLogicCreator } from './BallLogicCreator'
 import { BallEmitterCreator } from './BallEmitterCreator'
-import { IDIFactory } from 'atari-monk-ball-game-client-api'
-import { BallTypes, SharedTypes } from 'atari-monk-ball-game-lib-api'
+import { IBallManager, IDIFactory, ISocketLogicUnit } from 'atari-monk-ball-game-client-api'
+import {
+  BallTypes,
+  SharedTypes,
+} from 'atari-monk-ball-game-lib-api'
 import EventEmitter from 'eventemitter3'
 
 @injectable()
@@ -20,21 +23,27 @@ export class BallLogicFactory implements IDIFactory<IBallLogic> {
   }
 
   private registerBallManager(container: Container) {
-    container.bind(BallManager).toSelf().inSingletonScope()
+    container.bind<IBallManager>(BallManager).to(BallManager).inSingletonScope()
   }
 
   private registerBallSocketLogic(container: Container) {
     container
-      .bind(BallMovement)
+      .bind<ISocketLogicUnit>(BallMovement)
       .toDynamicValue(() => {
-        return new BallMovement('ballMovement', container.get(BallManager))
+        return new BallMovement(
+          'ballMovement',
+          container.get<IBallManager>(BallManager)
+        )
       })
       .inSingletonScope()
 
     container
-      .bind(BallVelocity)
+      .bind<ISocketLogicUnit>(BallVelocity)
       .toDynamicValue(() => {
-        return new BallVelocity('ballVelocity', container.get(BallManager))
+        return new BallVelocity(
+          'ballVelocity',
+          container.get<IBallManager>(BallManager)
+        )
       })
       .inSingletonScope()
 
@@ -68,7 +77,7 @@ export class BallLogicFactory implements IDIFactory<IBallLogic> {
   }
 
   public create(container: Container) {
-    const manager = container.get(BallManager)
+    const manager = container.get<IBallManager>(BallManager)
     const logicCreator = container.get(BallLogicCreator)
     const logic = logicCreator.create()
     const socket = container.get(Socket)

@@ -44,10 +44,8 @@ export { IDirectionFromKeyboard } from './keyboard/IDirectionFromKeyboard'
 export { IKeyboardInput } from './keyboard/IKeyboardInput'
 export { IKeyboardObserver } from './keyboard/IKeyboardObserver'
 //logic
-export { IEventEmitterLogicUnit } from './logic/IEventEmitterLogicUnit'
 export { ILogicUnit } from './logic/ILogicUnit'
 export { IServerLogicUnit } from './logic/IServerLogicUnit'
-export { ISocketLogicUnit } from './logic/ISocketLogicUnit'
 export { ISrvSctLogicUnit } from './logic/ISrvSctLogicUnit'
 //mobile
 export { IMobileDetectionService } from './mobile/IMobileDetectionService'
