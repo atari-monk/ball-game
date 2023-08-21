@@ -6,7 +6,7 @@ import {
   Environment,
 } from 'atari-monk-ball-game-client-api'
 import { SocketErrorHandler } from '../../SocketErrorHandler'
-import { IDIFactory } from '../IDIFactory'
+import { IDIFactory } from 'atari-monk-ball-game-client-api'
 
 @injectable()
 export abstract class SocketFactory implements IDIFactory<Socket> {

@@ -2,7 +2,7 @@ import { Container, injectable } from 'inversify'
 import { ConnectErrorHandler } from '../../socket-logic/ConnectErrorHandler'
 import { DisconnectHandler } from '../../socket-logic/DisconnectHandler'
 import { SocketLogicCreator } from './SocketLogicCreator'
-import { IDIFactory } from '../IDIFactory'
+import { IDIFactory } from 'atari-monk-ball-game-client-api'
 import { SocketLogicManager } from '../../lib/socket-logic/SocketLogicManager'
 
 @injectable()

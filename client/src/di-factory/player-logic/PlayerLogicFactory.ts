@@ -1,5 +1,5 @@
 import { Container, injectable } from 'inversify'
-import { IDIFactory } from '../IDIFactory'
+import { IDIFactory } from 'atari-monk-ball-game-client-api'
 import { PlayerManagerCreator } from './PlayerManagerCreator'
 import { IPlayerManager } from 'atari-monk-ball-game-client-api'
 import { PlayerManager } from '../../PlayerManager'

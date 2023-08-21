@@ -1,6 +1,6 @@
 import { Container, injectable } from 'inversify'
 import { SocketLogicFactory } from '../socket-logic/SocketLogicFactory'
-import { IDIFactory } from '../IDIFactory'
+import { IDIFactory } from 'atari-monk-ball-game-client-api'
 import { ClosedSocketFactory } from '../socket/ClosedSocketFactory'
 import { TestClientFactory } from './TestClientFactory'
 import { PlayerLogicFactory } from '../player-logic/PlayerLogicFactory'

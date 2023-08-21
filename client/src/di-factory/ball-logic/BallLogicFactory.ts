@@ -7,7 +7,7 @@ import { BallEventEmitterLogicUnit } from '../../emitter-logic/BallEventEmitterL
 import { Socket } from 'socket.io-client'
 import { BallLogicCreator } from './BallLogicCreator'
 import { BallEmitterCreator } from './BallEmitterCreator'
-import { IDIFactory } from '../IDIFactory'
+import { IDIFactory } from 'atari-monk-ball-game-client-api'
 import { BallTypes, SharedTypes } from 'atari-monk-ball-game-lib-api'
 import EventEmitter from 'eventemitter3'
 
