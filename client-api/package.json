@@ -2,7 +2,8 @@
   "name": "atari-monk-ball-game-client-api",
   "version": "0.0.1",
   "description": "",
-  "main": "index.js",
+  "main": "atari-monk-ball-game-client-api.js",
+  "types": "index.d.ts",
   "scripts": {
     "build": "npx webpack --config webpack.config.js",
     "build-ts": "tsc",
@@ -23,6 +24,7 @@
   },
   "dependencies": {
     "atari-monk-ball-game-lib-api": "file:atari-monk-ball-game-lib-api-0.0.1.tgz",
+    "eventemitter3": "^5.0.1",
     "socket.io-client": "^4.7.2"
   }
 }
