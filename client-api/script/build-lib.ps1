@@ -16,6 +16,11 @@ $client = $proj + "client\"
 Copy-Item $lib $client
 Set-Location $client
 npm i (Get-Item $pack).Name
+#install in game
+$game = $proj + "game\"
+Copy-Item $lib $game
+Set-Location $game
+npm i (Get-Item $pack).Name
 #clean files
 Remove-Item $lib
 Remove-Item ($client + $pack)

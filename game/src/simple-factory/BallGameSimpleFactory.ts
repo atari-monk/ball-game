@@ -1,9 +1,10 @@
 import { AppFactory } from './AppFactory'
 import { PlayersFactory } from './PlayersFactory'
 import { BallFactory } from './BallFactory'
-import { ClientFactory, ISocketConfig } from 'atari-monk-ball-game-client'
+import { ClientFactory } from 'atari-monk-ball-game-client'
 import { FieldFactory } from './FieldFactory'
 import { IFieldParams, IMobileFlags } from 'atari-monk-ball-game-lib-api'
+import { ISocketConfig } from 'atari-monk-ball-game-client-api'
 
 export class BallGameSimpleFactory {
   constructor(

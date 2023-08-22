@@ -26,6 +26,7 @@
   },
   "dependencies": {
     "atari-monk-ball-game-client": "file:atari-monk-ball-game-client-0.0.1.tgz",
+    "atari-monk-ball-game-client-api": "file:atari-monk-ball-game-client-api-0.0.1.tgz",
     "atari-monk-ball-game-lib": "file:atari-monk-ball-game-lib-0.0.2.tgz",
     "atari-monk-ball-game-lib-api": "file:atari-monk-ball-game-lib-api-0.0.1.tgz",
     "eventemitter3": "^5.0.1",

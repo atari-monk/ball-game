@@ -1,4 +1,4 @@
-import { Environment } from 'atari-monk-ball-game-client'
+import { Environment } from 'atari-monk-ball-game-client-api'
 
 export enum FactoryVersion {
   SimpleFactory = 'simpleFactory',

@@ -1,4 +1,4 @@
-import { Environment } from 'atari-monk-ball-game-client'
+import { Environment } from 'atari-monk-ball-game-client-api'
 import { FactoryVersion, IAppConfig } from './IAppConfig'
 
 const defaultConfig: IAppConfig = {
